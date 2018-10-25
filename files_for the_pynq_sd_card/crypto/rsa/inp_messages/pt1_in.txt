@@ -1,0 +1,441 @@
+###############################################################
+NAME           : pt1_in.txt                                   #
+MESSAGE COUNT  : 2*441                                        #
+Hex code for LF: 0x0A                                         #
+Hex code for # : 0x23                                         #
+                                                              #
+TERJE VIGEN by Henrik Ibsen                                   #
+                                                              #
+1. There lived a remarkably grizzled man                      #
+on the uttermost, barren isle                                 #
+he never harmed, in the wide world's span,                    #
+a soul by deceit or by guile;                                 #
+his eyes, though, sometimes would blaze and fret              #
+most when a storm was nigh,-                                  #
+and then people sensed he was troubled yet                    #
+and then there were few that felt no threat                   #
+with Terje Vigen by.                                          #
+                                                              #
+2. Distant the day, and that only day                         #
+I saw him with fish by the quay;                              #
+his hair was white, but he sang as gay                        #
+and blithe as a boy may be.                                   #
+The lasses he used as a light banter toward,                  #
+he joined in the town-lads' talk,                             #
+he waved his sou-wester, and leaped aboard;                   #
+then homeward he sailed with the jib set broad                #
+in sunshine, the aged hawk.                                   #
+                                                              #
+3. And now, all I've heard about Terje I'll try               #
+to tell from the first to last,                               #
+and if it should sometimes strike you as dry                  #
+at least it is truly cast;                                    #
+it came to me not as a firsthand piece                        #
+but from others, his intimates then,-                         #
+from those who stood by at his last release                   #
+and closed up his eyes in the sleep of peace                  #
+when he died at near three-score and ten.                     #
+                                                              #
+4. He proved quite a scamp in his early days,                 #
+his family soon outgrew,                                      #
+he learned about hardship's chastening ways                   #
+as youngest lad in the crew.                                  #
+Later, jumped ship once in Amsterdam                          #
+but pined, in the end, for home,                              #
+and came on the 'Union', captain Pram;                        #
+but home there was no-one to care a damn,                     #
+he'd left it so young to roam.                                #
+                                                              #
+5. Now he'd filled out, and he fairly shone                   #
+as a chap who would dress with pride.                         #
+But father and mother both were gone                          #
+and all of his kin be side.                                   #
+He drooped for a while, but his miseries                      #
+where shed in a day or so.                                    #
+With land underfoot he was never at ease;                     #
+no, better by far then to dwell on the seas,                  #
+on the mighty ebb and the flow.                               #
+                                                              #
+6. The year that followed saw Terje wed,-                     #
+the die seemed hastily cast.                                  #
+Folk thought he repented the thing he'd sped                  #
+that suddenly bound him fast.                                 #
+So under a roof of his own he stayed                          #
+one winter in wild carousethough                              #
+clear as daylight the windows displayed                       #
+their little curtains and blooms arrayed                      #
+in the tine red-painted house.                                #
+                                                              #
+7. When thaw-winds ended the ice's drouth                     #
+then Terje's brig took to the main;                           #
+in autumn, when wild-geese were winging south                 #
+he met with their flying skein.                               #
+A heaviness fell on the sailor's breast;                      #
+he knew himself strong, in bloom,                             #
+he came from shores that sunlight blessed,                    #
+life lay astern with its fire and zestand                     #
+ahead lay a winter's gloom.                                   #
+                                                              #
+8. They anchored, and off his crewmen went                    #
+with leave for a wild carouse.                                #
+He watched them with envy and discontent                      #
+while he stood by his silent house.                           #
+He stooped to peer through the curtain of white,-             #
+indoors there were two bestowed,-                             #
+his wife sat and span in the peaceful light,                  #
+but in the crib held a rosy, healthy mite,                    #
+a baby girl, and it crowed.                                   #
+                                                              #
+9. That instant, and Terje's mind, men say,                   #
+turned sober upon the spot.                                   #
+He toiled and he slaved, but at end of day                    #
+would be rocking his baby's cot.                              #
+On Sunday evenings, when the dance-tunes blare                #
+wild from the nearest-by farm,                                #
+he would sing his happiest ditties there                      #
+where little Anna tugged his brown hair                       #
+and lay in his folding arm.                                   #
+                                                              #
+10. Life ambled along till the year of war                    #
+in eighteen-hundred and nine.                                 #
+The tale's still told of what people bore,                    #
+where want and distress combine.                              #
+Cruisers from England blockaded each port,                    #
+by land there was dearth far and wide,                        #
+the poor people starved, and the wealthy went short,          #
+two powerful arms were no longer support                      #
+with death and disease outside.                               #
+                                                              #
+11. Then Terje drooped for a day or two                       #
+but his miseries quickly go;                                  #
+he thought of a comrade, ancient and true,                    #
+the sea's great ebb and it's flow.                            #
+Out west men are still by his deeds beguiled,                 #
+his daring the legends still quote:                           #
+"When winds stopped blustering quite so wild                  #
+Terje Vigen roved for his wife and child,                     #
+crossed the sea in an open boat!"                             #
+                                                              #
+12. The smallest dory there was to hand                       #
+he chose for his Skagen trip.                                 #
+Sail and mast he left home on land,-                          #
+such gear he thought best not ship.                           #
+He reckoned, did Terje, the boat would steer                  #
+though seas ram a bit a-beam;                                 #
+the Jutland reef was the devil to clear,-                     #
+but worse, he'd the English blockade to fear,                 #
+its look-out's eagle-eyed gleam.                              #
+                                                              #
+13. Then trusting to fortune's grace profound                 #
+he smartly took on the oars.                                  #
+At Fladstrand, reaching there safe and sound,                 #
+he gathered his precious stores.                              #
+God knows his cargo was nothing grand:                        #
+three casks of barley, that's all;                            #
+but Terje came from a wretched land,-                         #
+and here was the staff of life to hand;                       #
+and his wife and baby call.                                   #
+                                                              #
+14. He slaved on the thwart for three nights and days,        #
+that brave and powerful man;                                  #
+the fourth, at dawn, by sun's first rays,                     #
+a blurred, misty line to scan.                                #
+It wasn't the skeltering clouds he spied,                     #
+it was mountain and summit and brae:                          #
+but high above the ridges' pride,                             #
+Imenes-Saddle, blue and wide.                                 #
+He knew then just where he lay.                               #
+                                                              #
+15. Near home at last; a wretched time                        #
+he'd weathered with strength unflawed!                        #
+In hope and in trust his spirits climb,                       #
+he was ready to thank his Lord.                               #
+That instant the phrases froze on his lip;                    #
+he stared but his sighting was true,-                         #
+he could see, as the mist had relaxed its grip,               #
+in Hesnes-sound lay an English ship                           #
+with canvas a-back and hove-to.                               #
+                                                              #
+16. The boat was sighted; a challenged was heard,             #
+and the handiest route was barred;                            #
+the dawn-breeze flickered and barely stirredso                #
+Terje went westwards, hard.                                   #
+They lowered the jolly-boat over the side                     #
+he heard how the sailor men sang ,-                           #
+he pressed on the ribs with his feet braced wide,             #
+he rowed till the waters seethed to the stride,               #
+and blood from his fingernails sprang.                        #
+                                                              #
+                                                              #
+17. Gjaesling's the shoal with hidden top                     #
+just east of the Hombor sound.                                #
+An onshore wind makes an ugly chop,                           #
+and but two feet under, there's ground.                       #
+Its spraying foaming white, its spray flashing gold           #
+the deadest of calms won't soothe;-                           #
+but heavy swells, run they never so bold,                     #
+shatter and break and lose their hold;                        #
+inshore it is most times smooth.                              #
+                                                              #
+18. Inshore Terje Vigen's dory sped                           #
+like an arrow, through surf and spray;                        #
+but there on his track, by wake-waters led,                   #
+the jollyboat held its way.                                   #
+'Twas then that he cried through the thunderous roar          #
+to God in the depths of his dread;                            #
+'there on the most innermost beach a-shore                    #
+watches my wife at our pitiful door                           #
+and waits with our baby for bread!'                           #
+                                                              #
+19. The crew's yell, of course,                               #
+drowned the prayer one voice cried;                           #
+it was Lyngor, happening once more.                           #
+Fortune preferred the Englishman's side                       #
+who preyed upon Norway's shore.                               #
+Then Terje rammed on the shelving top,                        #
+the jollyboat grounded as well;                               #
+the English officer shouted 'stop'!                           #
+He hoisted an oarbutt and let it drop                         #
+and stove in the dory's shell.                                #
+                                                              #
+20. Rib was parted from shattered plank,                      #
+torrents of water gushed through;                             #
+in two feet depth all that treasure sank,                     #
+but Terje's defiance grew.                                    #
+He hurled him self at the armed men                           #
+and cleared the far side with one bound,-                     #
+he dived and he swam and he dived yet again;                  #
+the jollyboat cleared; though he struggled like ten,          #
+the sabres and muskets sound.                                 #
+                                                              #
+21. They lifted him out, and over the side,                   #
+the victory salvo rolled;                                     #
+there on the poop-deck, stiff with pride,                     #
+the captain, an eighteen-year-old.                            #
+His first sea-encounter was Terje's boat,                     #
+his arrogance knew no check:-                                 #
+but Terje knew any help was remote,-                          #
+that strong man collapsed, with sobbing throat                #
+to plead on his knees on deck.                                #
+                                                              #
+22. He offered his sorrow, they sold him their glee,          #
+they bartered with scorn for prayer.                          #
+It blew from the east, so with speed to sea                   #
+stood England's conquering heir.                              #
+Then Terje fell silent; all hope was past,                    #
+he locked up his grief in his soul.                           #
+Yet non of his captors but marked how fast,                   #
+like warning of storm before the blast,                       #
+the clouds on his brow would roll.                            #
+                                                              #
+23. He languished in prison for many a day,                   #
+for all five years, say some;                                 #
+his shoulders rounded, his hair it turned grey                #
+from dreaming about his home.                                 #
+Something he brooded but hid like some hoard,                 #
+his only resource, from men's view.                           #
+Then eighteen-fourteen came and with it accord;               #
+a Swedish frigate brought home onboard                        #
+Norways's prisoners, and Terje too.                           #
+                                                              #
+24. Back at the jetty he came ashore,                         #
+a pilot by King's decree;                                     #
+but few recalled in the greybeard they saw                    #
+the youngster who braved the sea.                             #
+His house was a stranger's; and how they fared                #
+those two,- that was easily found:                            #
+'The husband forsook them, and nobody cared,                  #
+they came to the plot that the paupers shared                 #
+in the parish burial-ground.'-                                #
+                                                              #
+25. Years went by, and he kept to his trade                   #
+as a pilot out there on the isle;                             #
+and never in world's wide span he made                        #
+foes by deceit or by guile.                                   #
+His eyes, though, sometimes would blaze and fret,             #
+when the reef to the breakers rang high,-                     #
+and then people sensed he was troubled yet,                   #
+and then there were few that felt no threat                   #
+with Terje Vigen by.                                          #
+                                                              #
+26. One moonlit night, with onshore wind,                     #
+there was stir wher e the pilots sit;                         #
+an English yacht being carried in                             #
+with mainsail torn and jib split.                             #
+The foretop dispatched with a flag of red                     #
+its wordless appeal abroad.                                   #
+Close-reached to the weather, a cutter sped,                  #
+it tacked and it tacked, but it still drew ahead              #
+till the pilot stood firm on board.                           #
+                                                              #
+27. He seemed so assured, the grey-beard, so grand,           #
+like a hero he seized on the wheel;-                          #
+the yacht responded, stood out from the land,                 #
+the pilot-boat towing at heel.                                #
+The lord, with his lady and babe she bore,                    #
+uncovered his head and came aft:                              #
+'Preserve us alive from the breakers' roar                    #
+I'll make you as wealthy as wretched before.'-                #
+The pilot let go of the craft.                                #
+                                                              #
+28. His cheeks, they went white, and his mouth                #
+shaped a sound                                                #
+like a smile that at last can break free.                     #
+They yacht was broached and ran squarely aground,             #
+his lordship's queen of the sea.                              #
+'Abandon the ship! to the boats I say!                        #
+My lord and my lady, stay near!                               #
+We'll shiver to pieces - it's plain as day;                   #
+but there just inshore runs a sheltered way;                  #
+my wakeline will show where we steer!'                        #
+                                                              #
+29. Phosphorus blazed as they sped along                      #
+towards shore with the precious load.                         #
+Aft stood the pilot, tall and strong,                         #
+his eyes, they were keen, and glowed.                         #
+To leeward he glanced at Gjaeslingen's top,                   #
+and to windward at Hesnes' swell;                             #
+he let go helm and the foresail strop,                        #
+he hoisted an oarbutt and let it drop                         #
+and stove in the cutter's shell.                              #
+                                                              #
+30. Sea rushed in and a foam-white spray - -                  #
+confusion swept over the wreck-;                              #
+but pale, the mother in stark dismay                          #
+had snatched up her child from deck.                          #
+'Anna, my child!' She cried out in dread;                     #
+the greyhaired man started and stared;                        #
+he caught up the mainsheet, he turned the boat's head,        #
+it steadied, and trim as a bird it sped,                      #
+through surf and through spray it fared.                      #
+                                                              #
+31. They grounded and sank; but calmness itself               #
+inshore of the arc of rough seas;                             #
+under the surface a shoal of shelf,                           #
+the water but reached their knees.                            #
+The lord cried out: 'But look! look! –                        #
+this reef -it's shifting - it cannot be rock!'                #
+The pilot smiled: 'here is no cause for grief;                #
+a sunken dory supplies our relief,                            #
+three barleygrain casks our dock!'                            #
+                                                              #
+32. A deed half-lost in the memory                            #
+like a lightning the lord's face swepthe                      #
+knew, now, the sailor that on his knees                       #
+had crouched on his deck and wept.                            #
+Then cried Terje Vigen 'You held my all                       #
+in your hand, it was spent on renown.                         #
+One moment longer and vengeance will fall - -                 #
+''Twas then that the pilot, the Norseman, stood tall          #
+while the proud English lord knelt down.                      #
+                                                              #
+33. But Terje stayed poised with the oarshaft's length,       #
+as straight as he'd stood years before;                       #
+his eyes, they blazed with a frenzy's strength,               #
+the wind at his grey hair tore.                               #
+'You sailed at your ease in your mighty corvette,             #
+I rowed in my humble boat;                                    #
+I toiled for my own in my forehead's sweat,                   #
+you robbed them of bread, and could mock me yet               #
+and over my salt griefs gloat.                                #
+                                                              #
+34. Your wealthy lady is bright as a Spring                   #
+and her hand is as soft as silk fine;                         #
+but my wife's hand was a calloused thing,                     #
+yet for all that she counted as mine.                         #
+Your child is golden, her eyes as blue                        #
+as a little guest of our Lord;                                #
+ my daughter was nothing worth pointing to,                   #
+was thin, God help us, and sallow of huewhat                  #
+else can the poor afford?                                     #
+                                                              #
+35. See, those where my riches upon this earth,               #
+it was all that I could reckon my own.                        #
+To you it appeared a trifle's worth                           #
+but it counted to me a throne.-                               #
+It's time for my vengeance to strike, beware,-                #
+for your turn to suffer comes round                           #
+to match all the pain of long years' despair                  #
+that bowed down my shoulders and whitened my hair             #
+and buried my joy in the ground!'                             #
+                                                              #
+36. Seizing the child from it's mother's care                 #
+while his left grasped her waist in a vice-                   #
+'Stand back there, my lord! On step if you dare,-             #
+and your wife and child is the price!'                        #
+It seemed that the Englishman meant to raise                  #
+new war, but his arm lacked might; -                          #
+his breath was burning, unsure was his gaze,                  #
+and his hair,-it showed in the dawn's first raysturned        #
+grey in that one single night.                                #
+                                                              #
+37. But Terje's forehead showed peaceful and fair,            #
+his breast moved relaxed and free.                            #
+He set the child on its feet with care                        #
+and kissed its hands solemnly.                                #
+He breathed as though freed from a prison den,                #
+his voice calm and level to say:                              #
+'And now Terje Vigen's himself again.                         #
+Like a rocky stream flowed my blood till then;                #
+for I had to-I had to repay!                                  #
+                                                              #
+38. The years I spent in the prison's roar,                   #
+they bred my hert's sickliness.                               #
+And after, I lay like a heathland straw,                      #
+I peered in a foul abyss.                                     #
+But now it is over; we two are quit;                          #
+your debtor's not sly or low.                                 #
+I gave all I had-and you squandered it,                       #
+and ask, if you think you've been dealt unfit,                #
+ask God, who fashioned me so.'- -                             #
+                                                              #
+39. When daylight had broken, then all was well;              #
+long lay the yacht in the port.                               #
+The night's events they chose not to tell,                    #
+but Terje's great fame still caught.                          #
+Vanished the dreamer's clouded grey,                          #
+clear by one storm-night swept;                               #
+and Terje held straighter than most that day                  #
+the shoulders that bowed when, in deep dismay                 #
+he knelt on that deck and wept.                               #
+                                                              #
+40. One day milord and lady came by                           #
+and many, many folk more;                                     #
+they shook him by hand, bad 'farewell' and 'goodbye'          #
+as they stood by his humble door.                             #
+They thanked him for rescue from storm's shrill blare,        #
+for rescue from reef and from sea;                            #
+but Terje patted the child's long hair:                       #
+'No, rescue came in the nick out there                        #
+from this little mite by me!'                                 #
+                                                              #
+41. The yacht the headed for Hesnes-sound,                    #
+with Norway's own flag for wear.                              #
+And further west, near a foam-washed ground,                  #
+it fired a broadside there.                                   #
+Then teardrops glistened in Terje's eyes;                     #
+he watched from the rising shores;                            #
+'Great are my losses, but great my prize.                     #
+Perhaps it was all for the best, in some wise,-               #
+so thanks, God, are rightly yours!'                           #
+                                                              #
+42. And such was the man on that only day                     #
+I saw him with fish by the quay.                              #
+His hair was white, but he sang as gay                        #
+and blithe as a boy might be.                                 #
+The lasses he used a light banter towards,                    #
+he joined in the town-lads' talk:                             #
+he waived his sou-wester and leaped aboard,                   #
+the homeward he sailed with the jib broad                     #
+in sunshine, the aged hawk.                                   #
+                                                              #
+43. In Fjaere churchyard I saw a pilot,                       #
+that lay in a weathered sward;                                #
+it looked all neglected, a mean sunken spot,                  #
+but kept still its blackened board.                           #
+It read 'Thaerie Wiighen' in white,                           #
+the datehis final repose had been.                            #
+He lay to the sun and the winds' keen weight,                 #
+and that's why the grass was so stubborn-straight,            #
+but with wild field-flowers between.                          #
+###############################################################

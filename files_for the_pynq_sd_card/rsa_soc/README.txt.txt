@@ -1,0 +1,1 @@
+The files in this folder must be regenerated if you want to change the hardware

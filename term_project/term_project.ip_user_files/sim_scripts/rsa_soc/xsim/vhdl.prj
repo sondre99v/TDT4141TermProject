@@ -1,0 +1,18 @@
+vhdl xil_defaultlib  \
+"../../../bd/rsa_soc/ip/rsa_soc_axi_dma_0_0/sim/rsa_soc_axi_dma_0_0.vhd" \
+"../../../bd/rsa_soc/ip/rsa_soc_axi_smc_0/bd_0/ip/ip_1/sim/bd_ae75_psr_aclk_0.vhd" \
+"../../../bd/rsa_soc/ip/rsa_soc_axi_smc_0/sim/rsa_soc_axi_smc_0.vhd" \
+"../../../bd/rsa_soc/ip/rsa_soc_rst_ps7_0_100M_0/sim/rsa_soc_rst_ps7_0_100M_0.vhd" \
+"../../../bd/rsa_soc/sim/rsa_soc.vhd" \
+"../../../bd/rsa_soc/ipshared/bd43/hdl/rsa_regio.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../bd/rsa_soc/ipshared/bd43/hdl/rsa_msgin.vhd" \
+"../../../bd/rsa_soc/ipshared/bd43/hdl/rsa_msgout.vhd" \
+"../../../bd/rsa_soc/ipshared/bd43/hdl/rsa_accelerator.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/rsa_soc/ipshared/bd43/hdl/rsa_core.vhd" \
+"../../../bd/rsa_soc/ip/rsa_soc_rsa_accelerator_0_0/sim/rsa_soc_rsa_accelerator_0_0.vhd" \
+
+nosort

@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../rsa_accelerator/hdl/rsa_core.vhd" \
+"../../../../../rsa_accelerator/hdl/rsa_regio.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../../rsa_accelerator/hdl/rsa_msgin.vhd" \
+"../../../../../rsa_accelerator/hdl/rsa_msgout.vhd" \
+"../../../../../rsa_accelerator/hdl/rsa_accelerator.vhd" \
+
+# Do not sort compile order
+nosort

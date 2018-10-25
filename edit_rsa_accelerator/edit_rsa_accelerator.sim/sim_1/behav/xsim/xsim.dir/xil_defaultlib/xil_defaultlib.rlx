@@ -1,0 +1,9 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_accelerator.vhd,1540463839,vhdl2008,,,,rsa_accelerator,,,,,,,,
+C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_core.vhd,1540463839,vhdl,C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_accelerator.vhd,,,rsa_core,,,,,,,,
+C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_msgin.vhd,1540463839,vhdl2008,C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_accelerator.vhd,,,rsa_msgin,,,,,,,,
+C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_msgout.vhd,1540463839,vhdl2008,C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_accelerator.vhd,,,rsa_msgout,,,,,,,,
+C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_regio.vhd,1540463839,vhdl,C:/Users/Sondre/Dropbox/NTNU/05 Design av digitale systemer/Project/IntegrationKit/rsa_accelerator/hdl/rsa_accelerator.vhd,,,rsa_regio,,,,,,,,
