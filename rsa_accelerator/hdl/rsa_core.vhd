@@ -58,7 +58,7 @@ entity rsa_core is
     -----------------------------------------------------------------------------
     -- Interface to the register block
     -----------------------------------------------------------------------------    
-	key_e_d                 :  in std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+		key_e_d                 :  in std_logic_vector(C_BLOCK_SIZE-1 downto 0);
     key_n                   :  in std_logic_vector(C_BLOCK_SIZE-1 downto 0);
     rsa_status              : out std_logic_vector(31 downto 0)    
           
