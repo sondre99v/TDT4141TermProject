@@ -1,0 +1,18 @@
+# Møte 25. oktober
+
+* Gått igjennom rapport
+* Gått igjennom state-diagram
+
+## Avtalt
+* Oppdeling av oppgaver
+	* Wesley
+		* Implementasjon av MVP input og output interfaces
+			* Må implementere AXI_SLAVE og AXI_MASTER interfacene
+			* Må interface én RSA_CORE modul
+		* Implementasjon av debug-modulen (AXI_STREAM_SLAVE)
+		* Skriv inn relevante ting i rapport
+	* Sondre
+		* Implementere MVP av RSA_CORE
+		* Tegne datapath-diagram til rapport
+		* Verifisering
+		* Skriv inn relevante ting i rapport
