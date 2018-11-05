@@ -70,7 +70,7 @@ architecture rtl of rsa_core is
 begin
   msgout_valid <= msgin_valid;   
   msgin_ready  <= msgout_ready;
-  msgout_data  <= msgin_data xor key_n;
+  msgout_data  <= msgin_data xor key_n;  -- 256 
   msgout_last  <= msgin_last;
   rsa_status   <= (others => '0');
 end rtl;

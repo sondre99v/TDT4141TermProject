@@ -1,0 +1,421 @@
+
+*** Running vivado
+    with args -log rsa_accelerator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rsa_accelerator.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source rsa_accelerator.tcl -notrace
+Command: synth_design -top rsa_accelerator -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10632 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 372.113 ; gain = 98.738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rsa_accelerator' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'rsa_regio' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:111]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:304]
+INFO: [Synth 8-256] done synthesizing module 'rsa_regio' (1#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgin' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgin.vhd:69]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgin' (2#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgin.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgout' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgout.vhd:61]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgout' (3#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgout.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'rsa_core' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:68]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_core' (4#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'rsa_accelerator' (5#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port clk
+WARNING: [Synth 8-3331] design rsa_core has unconnected port reset_n
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[255]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[254]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[253]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[252]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[251]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[250]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[249]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[248]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[247]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[246]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[245]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[244]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[243]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[242]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[241]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[240]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[239]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[238]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[237]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[236]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[235]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[234]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[233]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[232]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[231]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[230]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[229]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[228]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[227]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[226]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[225]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[224]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[223]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[222]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[221]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[220]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[219]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[218]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[217]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[216]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[215]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[214]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[213]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[212]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[211]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[210]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[209]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[208]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[207]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[206]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[205]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[204]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[203]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[202]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[201]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[200]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[199]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[198]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[197]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[196]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[195]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[194]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[193]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[192]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[191]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[190]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[189]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[188]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[187]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[186]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[185]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[184]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[183]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[182]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[181]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[180]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[179]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[178]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[177]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[176]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[175]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[174]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[173]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[172]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[171]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[170]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[169]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[168]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[167]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[166]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[165]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[164]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[163]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[162]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[161]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[160]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[159]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[158]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 433.160 ; gain = 159.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 433.160 ; gain = 159.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 433.160 ; gain = 159.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 436.539 ; gain = 163.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    256 Bit         XORs := 1     
++---Registers : 
+	              256 Bit    Registers := 1     
+	               32 Bit    Registers := 42    
+	                8 Bit    Registers := 5     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   4 Input    256 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 33    
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+	  35 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rsa_regio 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 34    
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 33    
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+	  35 Input      1 Bit        Muxes := 1     
+Module rsa_msgin 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module rsa_msgout 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   4 Input    256 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module rsa_core 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    256 Bit         XORs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design rsa_accelerator has port m00_axis_tstrb[3] driven by constant 1
+WARNING: [Synth 8-3917] design rsa_accelerator has port m00_axis_tstrb[2] driven by constant 1
+WARNING: [Synth 8-3917] design rsa_accelerator has port m00_axis_tstrb[1] driven by constant 1
+WARNING: [Synth 8-3917] design rsa_accelerator has port m00_axis_tstrb[0] driven by constant 1
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_rsa_regio/aw_en_reg)
+INFO: [Synth 8-3886] merging instance 'u_rsa_regio/axi_rresp_reg[0]' (FDRE) to 'u_rsa_regio/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_rsa_regio/\axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'u_rsa_regio/axi_bresp_reg[0]' (FDRE) to 'u_rsa_regio/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_rsa_regio/\axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (aw_en_reg) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_awaddr_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_awaddr_reg[0]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_bresp_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[0]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (axi_rresp_reg[1]) is unused and will be removed from module rsa_regio.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     1|
+|3     |LUT2  |    56|
+|4     |LUT3  |    37|
+|5     |LUT4  |   228|
+|6     |LUT5  |     1|
+|7     |LUT6  |   463|
+|8     |MUXF7 |   160|
+|9     |FDCE  |   537|
+|10    |FDRE  |  1099|
+|11    |FDSE  |    10|
+|12    |IBUF  |    90|
+|13    |OBUF  |    80|
++------+------+------+
+
+Report Instance Areas: 
++------+---------------+-----------+------+
+|      |Instance       |Module     |Cells |
++------+---------------+-----------+------+
+|1     |top            |           |  2763|
+|2     |  u_rsa_msgin  |rsa_msgin  |   547|
+|3     |  u_rsa_msgout |rsa_msgout |   281|
+|4     |  u_rsa_regio  |rsa_regio  |  1764|
++------+---------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 640.086 ; gain = 366.711
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 548 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 640.086 ; gain = 366.711
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 640.086 ; gain = 366.711
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 250 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 713.734 ; gain = 452.672
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/rsa_accelerator.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file rsa_accelerator_utilization_synth.rpt -pb rsa_accelerator_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.258 . Memory (MB): peak = 713.734 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  5 00:33:27 2018...

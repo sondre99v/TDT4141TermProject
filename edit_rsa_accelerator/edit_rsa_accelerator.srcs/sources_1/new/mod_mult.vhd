@@ -1,16 +1,27 @@
--- *****************************************************************************
--- Name:     mod_mult.vhd   
--- Created:  18.10.18 @ NTNU   
--- Author:   Sondre Ninive Andersen
--- Purpose:  A modular multiplier.
--- *****************************************************************************
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 05.11.2018 00:49:23
+-- Design Name: 
+-- Module Name: mod_mult - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-use IEEE.math_real."ceil";
-use IEEE.math_real."log2";
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -23,17 +34,14 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity mod_mult is
     generic(WORD_WIDTH : integer :=32);
-    Port ( 
-    clk		  : in  std_logic;
-    rst       : in  std_logic;
-    start     : in  std_logic;
-    inputA    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-    inputB    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-    inputN    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-
-    result    : out std_logic_vector(WORD_WIDTH-1 downto 0);
-    busy    : out std_logic
-    );
+    Port ( clk : in STD_LOGIC;
+           rst : in STD_LOGIC;
+           start : in STD_LOGIC;
+           inputA : in STD_LOGIC;
+           inputB : in STD_LOGIC;
+           inputN : in STD_LOGIC;
+           result : out STD_LOGIC;
+           busy : out STD_LOGIC);
 end mod_mult;
 
 architecture rtl of mod_mult is
@@ -55,7 +63,7 @@ architecture rtl of mod_mult is
 	
 
 begin
-	process(clk, rst, State) 
+	process(clk, rst) 
 	--Variables inside processes
     variable nextState : State_Type;
     variable temp : unsigned(WORD_WIDTH-1 downto 0);
@@ -106,25 +114,25 @@ begin
 			-- Handle entry actions for the new state
 			case nextState is
 				when Idle =>
-					Result <=  std_logic_vector(Product);
-					Busy <= '0';
+					Result <= Product;
+					Busy <= 0;
 					
 				when LoadRegisters =>
-					Product <=to_unsigned(0,Product'length);
-					FactorA <= unsigned(inputA);
-					FactorB <= unsigned('0' & inputB);
-					Modulus <= unsigned(inputN);
-					Counter <= to_unsigned(0,Counter'length);
+					Product <= 0;
+					FactorA <= inputA;
+					FactorB <= 0 & inputB;
+					Modulus <= inputN;
+					Counter <= 0;
 					Busy <= '1';
 				
 				when ShiftProduct =>
-					Product <= (Product sll 1);
-					Counter <= (Counter + 1);
+					Product <= (Product << 1);
+					Counter <= Counter + 1);
 					
 				when FirstReduction =>
-					FactorB <= FactorB sll 1;
+					FactorB <= FactorB << 1;
 					temp := Product - Modulus;
-					if (temp(WORD_WIDTH-1)='1') then
+					if (temp(WORD_WIDTH-1)) then
 						Product <= temp;
 					end if;
 				
@@ -133,7 +141,7 @@ begin
 				
 				when SecondReduction =>
 					temp := Product - Modulus;
-					if (temp(WORD_WIDTH-1)='1') then
+					if (temp(WORD_WIDTH-1)) then
 						Product <= temp;
 					end if;
 				
