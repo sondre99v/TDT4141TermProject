@@ -22,7 +22,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity mod_mult is
-    generic(WORD_WIDTH : integer :=32);
+    generic(WORD_WIDTH : integer := 32);
     Port ( 
     clk		  : in  std_logic;
     rst       : in  std_logic;
@@ -110,11 +110,11 @@ begin
 					Busy <= '0';
 					
 				when LoadRegisters =>
-					Product <=to_unsigned(0,Product'length);
+					Product <= to_unsigned(0, Product'length);
 					FactorA <= unsigned(inputA);
 					FactorB <= unsigned('0' & inputB);
 					Modulus <= unsigned(inputN);
-					Counter <= to_unsigned(0,Counter'length);
+					Counter <= to_unsigned(0, Counter'length);
 					Busy <= '1';
 				
 				when ShiftProduct =>
