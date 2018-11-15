@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov  8 13:03:59 2018
+# Process ID: 4236
+# Current directory: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11728 C:\Users\WesleyRyan\Documents\Programming\RSA\TDT4141TermProject\edit_rsa_accelerator\edit_rsa_accelerator.xpr
+# Log file: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/vivado.log
+# Journal file: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator'
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:29 . Memory (MB): peak = 774.047 ; gain = 112.117
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Nov  8 13:08:41 2018] Launched synth_1...
+Run output will be captured here: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Nov  8 13:09:54 2018] Launched synth_1...
+Run output will be captured here: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 250 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:44 ; elapsed = 00:00:20 . Memory (MB): peak = 1244.109 ; gain = 435.031
+close_project
+open_project C:/Users/WesleyRyan/Documents/Programming/Elektronikk/TestModmult/TestModmult.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1688.020 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7k70tfbv676-1
+INFO: [Netlist 29-17] Analyzing 899 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'mod_mult' is not ideal for floorplanning, since the cellview 'mod_mult' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 1688.020 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  8 14:01:09 2018...

@@ -61,7 +61,13 @@ entity rsa_msgin is
    -- Message that will be sent out of the rsa_msgin module
    msgin_data             : out std_logic_vector(C_BLOCK_SIZE-1 downto 0);
    -- Indicates boundary of last packet
-   msgin_last             : out std_logic
+   msgin_last             : out std_logic;
+   
+   -----------------------------------------------------------------------------
+   -- Misc control signals      
+   -----------------------------------------------------------------------------
+   -- Signal that indicates that the msgin module is active
+   msgin_active           : out std_logic   
 		
 	);
 end rsa_msgin;
@@ -85,6 +91,10 @@ architecture rtl of rsa_msgin is
 	
 	signal s_axis_accept         : std_logic;
 	signal s_axis_tready_i       : std_logic;
+
+  signal msgin_active_en       : std_logic;
+	signal msgin_active_nxt      : std_logic;	
+	signal msgin_active_r        : std_logic;
 begin
 	-- I/O Connections assignments
 	
@@ -198,5 +208,23 @@ begin
   msgin_data <= input_message;
   
   
+  --------------------------------------------------------------------------------
+  -- Detect activity and set the active flag.
+  --------------------------------------------------------------------------------
+  msgin_active_en  <= s_axis_accept or (msgin_ready and msgin_valid_i);
+  msgin_active_nxt <= S_AXIS_TVALID or (msgin_valid_i and (not msgbuf_last_r));     
+  process(S_AXIS_ARESETN, S_AXIS_ACLK)
+  begin
+    if(S_AXIS_ARESETN='0')then
+      -- Reset the active flag
+      msgin_active_r <= '0';      
+    elsif(S_AXIS_ACLK'event and S_AXIS_ACLK='1') then
+      -- Update the active flag
+      if(msgin_active_en = '1') then
+        msgin_active_r <= msgin_active_nxt;  
+      end if;
+    end if;
+  end process;
+  msgin_active <= msgin_active_r;
    	
 end rtl;

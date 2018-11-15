@@ -17,6 +17,7 @@
 --   Registers  [15..8]: Used for the 256 bit key_e/key_d
 --   Registers [31..16]: Unused
 --   Register      [32]: Status register
+--   Register      [33]: Performance counter [ACTIVE_CYCLES]
 --------------------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
@@ -37,9 +38,10 @@ entity rsa_regio is
 	);
 	port (
 		-- Users to add ports here
-		key_e_d      : out std_logic_vector(C_BLOCK_SIZE-1 downto 0);
-		key_n        : out std_logic_vector(C_BLOCK_SIZE-1 downto 0);
-		rsa_status   : in  std_logic_vector(31 downto 0);
+		key_e_d          : out std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+		key_n            : out std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+		rsa_status       : in  std_logic_vector(31 downto 0);
+		event_rsa_active : in  std_logic;
 
 		-- User ports ends
 		-- Do not modify the ports beyond this line
@@ -166,6 +168,7 @@ architecture rtl of rsa_regio is
 	signal slv_reg30	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg31	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg32	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	signal slv_reg33	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);	
 	signal slv_reg_rden	: std_logic;
 	signal slv_reg_wren	: std_logic;
 	signal reg_data_out	:std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -300,6 +303,7 @@ begin
 	      slv_reg30 <= (others => '0');
 	      slv_reg31 <= (others => '0');
 	      slv_reg32 <= (others => '0');
+	      slv_reg33 <= (others => '0');	      
 	    else
 	      loc_addr := axi_awaddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
 	      
@@ -307,6 +311,14 @@ begin
 	      -- TODO: Add clock enable to avoid clocking the register
 	      -- every clock cycle. This will reduce the energy consumption.
 	      slv_reg32 <= rsa_status;
+	      
+	      -- Increment the active cycle performance counter when the core is active.
+	      -- It is important that the CPU clears this register before the 
+	      -- encryption/decryption is started.
+	      if(event_rsa_active='1') then
+	        slv_reg33 <= std_logic_vector(unsigned(slv_reg33) + 1);
+	      end if;
+	      
 	      
 	      if (slv_reg_wren = '1') then
 	        case loc_addr is
@@ -574,6 +586,14 @@ begin
 	                slv_reg32(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
 	              end if;
 	            end loop;
+	          when b"100001" =>
+                for byte_index in 0 to (C_S_AXI_DATA_WIDTH/8-1) loop
+                  if ( S_AXI_WSTRB(byte_index) = '1' ) then
+                    -- Respective byte enables are asserted as per write strobes                   
+                    -- slave registor 32
+                    slv_reg33(byte_index*8+7 downto byte_index*8) <= S_AXI_WDATA(byte_index*8+7 downto byte_index*8);
+                  end if;
+                end loop;	            
 	          when others =>
 	            slv_reg0 <= slv_reg0;
 	            slv_reg1 <= slv_reg1;
@@ -608,6 +628,7 @@ begin
 	            slv_reg30 <= slv_reg30;
 	            slv_reg31 <= slv_reg31;
 	            slv_reg32 <= slv_reg32;
+	            slv_reg33 <= slv_reg33;	            
 	        end case;
 	      end if;
 	    end if;
@@ -695,7 +716,7 @@ begin
 	-- and the slave is ready to accept the read address.
 	slv_reg_rden <= axi_arready and S_AXI_ARVALID and (not axi_rvalid) ;
 
-	process (slv_reg0, slv_reg1, slv_reg2, slv_reg3, slv_reg4, slv_reg5, slv_reg6, slv_reg7, slv_reg8, slv_reg9, slv_reg10, slv_reg11, slv_reg12, slv_reg13, slv_reg14, slv_reg15, slv_reg16, slv_reg17, slv_reg18, slv_reg19, slv_reg20, slv_reg21, slv_reg22, slv_reg23, slv_reg24, slv_reg25, slv_reg26, slv_reg27, slv_reg28, slv_reg29, slv_reg30, slv_reg31, slv_reg32, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
+	process (slv_reg0, slv_reg1, slv_reg2, slv_reg3, slv_reg4, slv_reg5, slv_reg6, slv_reg7, slv_reg8, slv_reg9, slv_reg10, slv_reg11, slv_reg12, slv_reg13, slv_reg14, slv_reg15, slv_reg16, slv_reg17, slv_reg18, slv_reg19, slv_reg20, slv_reg21, slv_reg22, slv_reg23, slv_reg24, slv_reg25, slv_reg26, slv_reg27, slv_reg28, slv_reg29, slv_reg30, slv_reg31, slv_reg32, slv_reg33, axi_araddr, S_AXI_ARESETN, slv_reg_rden)
 	variable loc_addr :std_logic_vector(OPT_MEM_ADDR_BITS downto 0);
 	begin
 	    -- Address decoding for reading registers
@@ -767,6 +788,8 @@ begin
 	        reg_data_out <= slv_reg31;
 	      when b"100000" =>
 	        reg_data_out <= slv_reg32;
+	      when b"100001" =>
+          reg_data_out <= slv_reg33;	        
 	      when others =>
 	        reg_data_out  <= (others => '0');
 	    end case;

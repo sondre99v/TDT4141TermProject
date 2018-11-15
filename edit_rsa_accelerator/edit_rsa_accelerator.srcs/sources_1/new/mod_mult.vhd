@@ -22,6 +22,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
+use IEEE.math_real."ceil";
+use IEEE.math_real."log2";
+--use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -33,15 +36,18 @@ use ieee.numeric_std.all;
 --use UNISIM.VComponents.all;
 
 entity mod_mult is
-    generic(WORD_WIDTH : integer :=32);
-    Port ( clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
-           start : in STD_LOGIC;
-           inputA : in STD_LOGIC;
-           inputB : in STD_LOGIC;
-           inputN : in STD_LOGIC;
-           result : out STD_LOGIC;
-           busy : out STD_LOGIC);
+    generic(WORD_WIDTH : integer :=256);
+    Port ( 
+    clk		  : in  std_logic;
+    rst_n       : in  std_logic;
+    start     : in  std_logic;
+    inputA    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
+    inputB    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
+    inputN    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
+
+    o_result    : out std_logic_vector(WORD_WIDTH-1 downto 0);
+    o_busy    : out std_logic
+    );
 end mod_mult;
 
 architecture rtl of mod_mult is
@@ -55,22 +61,23 @@ architecture rtl of mod_mult is
 	);
 	
 	signal State : State_Type;
-	signal Product : unsigned(WORD_WIDTH-1 downto 0);
+	signal Product : unsigned(WORD_WIDTH downto 0):= (others => '0');
 	signal FactorA : unsigned(WORD_WIDTH-1 downto 0);
 	signal FactorB : unsigned(WORD_WIDTH downto 0);
 	signal Modulus : unsigned(WORD_WIDTH-1 downto 0);
-	signal Counter : unsigned(integer(ceil(log2(real(WORD_WIDTH))))-1 downto 0);
+	signal Counter : unsigned(integer(ceil(log2(real(WORD_WIDTH)))) downto 0);
 	
 
 begin
-	process(clk, rst) 
+	process(clk, rst_n, State) 
 	--Variables inside processes
     variable nextState : State_Type;
-    variable temp : unsigned(WORD_WIDTH-1 downto 0);
+    variable temp : unsigned(WORD_WIDTH downto 0):=(others => '0');
+    variable tempr : unsigned(WORD_WIDTH downto 0):=(others => '0');
 	begin
 		nextState := State;
 		
-		if(rst = '1') then
+		if(rst_n = '0') then
 			nextState := Idle;
 		elsif rising_edge(clk) then
 		
@@ -87,7 +94,9 @@ begin
 					nextState := FirstReduction;
 					
 				when FirstReduction =>
-					if FactorB(WORD_WIDTH) = '1' then
+				    tempr:= shift_right(FactorB,WORD_WIDTH); -- (mm1_b >>k) >0; 
+					if (tempr > to_unsigned(0,tempr'length)) then
+					-- if(FactorB(WORD_WIDTH)) then
 						nextState := Accumulate;
 					else
 						if (Counter = WORD_WIDTH) then
@@ -114,34 +123,35 @@ begin
 			-- Handle entry actions for the new state
 			case nextState is
 				when Idle =>
-					Result <= Product;
-					Busy <= 0;
+					o_result <=  std_logic_vector(Product(WORD_WIDTH-1 downto 0));
+					o_busy <= '0';
 					
 				when LoadRegisters =>
-					Product <= 0;
-					FactorA <= inputA;
-					FactorB <= 0 & inputB;
-					Modulus <= inputN;
-					Counter <= 0;
-					Busy <= '1';
+					Product <=(others => '0');
+					FactorA <= unsigned(inputA);
+					FactorB <= unsigned('0' & inputB);
+					Modulus <= unsigned(inputN);
+					Counter <= to_unsigned(0,Counter'length);
+					o_busy <= '1';
 				
 				when ShiftProduct =>
-					Product <= (Product << 1);
-					Counter <= Counter + 1);
+					Product <= shift_left(Product,1);
+					Counter <= (Counter + 1);
 					
 				when FirstReduction =>
-					FactorB <= FactorB << 1;
-					temp := Product - Modulus;
-					if (temp(WORD_WIDTH-1)) then
+					--FactorB <= (shift_left(FactorB,1) and (shift_left(to_unsigned(1,FactorB'length),WORD_WIDTH+1)) - to_unsigned(1,FactorB'length));
+					FactorB <= shift_left(FactorB,1);
+					temp := Product - unsigned('0' & Modulus);
+					if (temp(WORD_WIDTH)='0') then
 						Product <= temp;
 					end if;
-				
+				    
 				when Accumulate =>
-					Product <= Product + FactorA;
+					Product <= Product + unsigned('0' & FactorA);
 				
 				when SecondReduction =>
-					temp := Product - Modulus;
-					if (temp(WORD_WIDTH-1)) then
+					temp := Product - unsigned('0' & Modulus);
+					if (temp(WORD_WIDTH)='0') then
 						Product <= temp;
 					end if;
 				
@@ -152,3 +162,6 @@ begin
 		State <= nextState;
 	end process;
 end rtl;
+
+--NOTAT
+

@@ -58,7 +58,7 @@ entity rsa_core is
     -----------------------------------------------------------------------------
     -- Interface to the register block
     -----------------------------------------------------------------------------    
-		key_e_d                 :  in std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+	key_e_d                 :  in std_logic_vector(C_BLOCK_SIZE-1 downto 0);
     key_n                   :  in std_logic_vector(C_BLOCK_SIZE-1 downto 0);
     rsa_status              : out std_logic_vector(31 downto 0)    
           
@@ -66,11 +66,65 @@ entity rsa_core is
 end rsa_core;
 
 architecture rtl of rsa_core is
-
+component mod_exp 
+    Port ( 
+        clk             : in  std_logic;
+        rst          : in  std_logic;
+        start        : in  std_logic;
+        inputBase    : in  std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+        inputExp     : in  std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+        inputModulus : in  std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+    
+        result       : out std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+        busy         : out std_logic
+        );
+        end component;
+    
+    --inputs
+    signal start     :   std_logic:='0';
+    signal BaseReg    :   std_logic_vector(C_BLOCK_SIZE-1 downto 0):=(others =>'0'); --msg_in
+    signal ExpReg    :   std_logic_vector(C_BLOCK_SIZE-1 downto 0):=(others =>'0'); --key_e_d
+    signal ModReg    :   std_logic_vector(C_BLOCK_SIZE-1 downto 0):=(others =>'0'); --key_n
+    
+    --outputs
+    signal result : std_logic_vector(C_BLOCK_SIZE-1 downto 0); --msgout
+    signal busy : std_logic;
+    
+    --internals
+    signal new_message : std_logic;
+    
 begin
-  msgout_valid <= msgin_valid;   
-  msgin_ready  <= msgout_ready;
-  msgout_data  <= msgin_data xor key_n;  -- 256 
-  msgout_last  <= msgin_last;
+    uut: mod_exp port map (
+    clk=>clk,
+    rst=>reset_n,
+    start=>start,
+    inputBase=>BaseReg,
+    inputExp=>ExpReg,
+    inputModulus=>ModReg,
+    result=>result,
+    busy=>busy
+    );
+    
+    --MsgIn interface
+    new_message <= (msgin_valid and (not busy));
+    msgin_ready <= not busy;
+    ExpReg <= key_e_d;
+    ModReg <= key_n;
+    start <= new_message;   
+    BaseReg <= msgin_data;
+     --MsgOut interface
+     
+    --msgout_valid <= new_message and (result(0) or result(34));
+    msgout_data <= result;
+    
+    
+    
+
+
+
+  --msgout_valid <= msgin_valid;   
+  --msgin_ready  <= msgout_ready;
+  --msgout_data  <= msgin_data xor key_n; --result
+  --msgout_last  <= msgin_last;
   rsa_status   <= (others => '0');
 end rtl;

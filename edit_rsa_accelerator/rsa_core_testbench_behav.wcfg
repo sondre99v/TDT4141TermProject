@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rsa_core_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="rsa_core_testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="282266600fs"></ZoomStartTime>
+      <ZoomEndTime time="282448001fs"></ZoomEndTime>
+      <Cursor1Time time="282350000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="148"></NameColumnWidth>
+      <ValueColumnWidth column_width="437"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="45" />
+   <wvobject fp_name="/rsa_core_testbench/msgin_valid" type="logic">
+      <obj_property name="ElementShortName">msgin_valid</obj_property>
+      <obj_property name="ObjectShortName">msgin_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgin_ready" type="logic">
+      <obj_property name="ElementShortName">msgin_ready</obj_property>
+      <obj_property name="ObjectShortName">msgin_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/BaseReg" type="array">
+      <obj_property name="ElementShortName">BaseReg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseReg[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgin_data" type="array">
+      <obj_property name="ElementShortName">msgin_data[255:0]</obj_property>
+      <obj_property name="ObjectShortName">msgin_data[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgin_last" type="logic">
+      <obj_property name="ElementShortName">msgin_last</obj_property>
+      <obj_property name="ObjectShortName">msgin_last</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgout_valid" type="logic">
+      <obj_property name="ElementShortName">msgout_valid</obj_property>
+      <obj_property name="ObjectShortName">msgout_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgout_ready" type="logic">
+      <obj_property name="ElementShortName">msgout_ready</obj_property>
+      <obj_property name="ObjectShortName">msgout_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgout_data" type="array">
+      <obj_property name="ElementShortName">msgout_data[255:0]</obj_property>
+      <obj_property name="ObjectShortName">msgout_data[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgout_last" type="logic">
+      <obj_property name="ElementShortName">msgout_last</obj_property>
+      <obj_property name="ObjectShortName">msgout_last</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/key_e_d" type="array">
+      <obj_property name="ElementShortName">key_e_d[255:0]</obj_property>
+      <obj_property name="ObjectShortName">key_e_d[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/key_n" type="array">
+      <obj_property name="ElementShortName">key_n[255:0]</obj_property>
+      <obj_property name="ObjectShortName">key_n[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/rsa_status" type="array">
+      <obj_property name="ElementShortName">rsa_status[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rsa_status[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/tc_ctrl_state" type="other">
+      <obj_property name="ElementShortName">tc_ctrl_state</obj_property>
+      <obj_property name="ObjectShortName">tc_ctrl_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/all_input_messages_sent" type="logic">
+      <obj_property name="ElementShortName">all_input_messages_sent</obj_property>
+      <obj_property name="ObjectShortName">all_input_messages_sent</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/all_output_messages_received" type="logic">
+      <obj_property name="ElementShortName">all_output_messages_received</obj_property>
+      <obj_property name="ObjectShortName">all_output_messages_received</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/start_tc" type="logic">
+      <obj_property name="ElementShortName">start_tc</obj_property>
+      <obj_property name="ObjectShortName">start_tc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgin_state" type="other">
+      <obj_property name="ElementShortName">msgin_state</obj_property>
+      <obj_property name="ObjectShortName">msgin_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgin_counter" type="array">
+      <obj_property name="ElementShortName">msgin_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">msgin_counter[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgout_state" type="other">
+      <obj_property name="ElementShortName">msgout_state</obj_property>
+      <obj_property name="ObjectShortName">msgout_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/msgout_counter" type="array">
+      <obj_property name="ElementShortName">msgout_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">msgout_counter[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/new_message" type="logic">
+      <obj_property name="ElementShortName">new_message</obj_property>
+      <obj_property name="ObjectShortName">new_message</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/State" type="other">
+      <obj_property name="ElementShortName">State</obj_property>
+      <obj_property name="ObjectShortName">State</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/result" type="array">
+      <obj_property name="ElementShortName">result[255:0]</obj_property>
+      <obj_property name="ObjectShortName">result[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/State" type="other">
+      <obj_property name="ElementShortName">State</obj_property>
+      <obj_property name="ObjectShortName">State</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/State" type="other">
+      <obj_property name="ElementShortName">State</obj_property>
+      <obj_property name="ObjectShortName">State</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputA_mm1" type="array">
+      <obj_property name="ElementShortName">inputA_mm1[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputA_mm1[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputB_mm1" type="array">
+      <obj_property name="ElementShortName">inputB_mm1[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputB_mm1[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputN_mm1" type="array">
+      <obj_property name="ElementShortName">inputN_mm1[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputN_mm1[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputA_mm2" type="array">
+      <obj_property name="ElementShortName">inputA_mm2[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputA_mm2[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputB_mm2" type="array">
+      <obj_property name="ElementShortName">inputB_mm2[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputB_mm2[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputN_mm2" type="array">
+      <obj_property name="ElementShortName">inputN_mm2[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputN_mm2[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputBase" type="array">
+      <obj_property name="ElementShortName">inputBase[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputBase[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputExp" type="array">
+      <obj_property name="ElementShortName">inputExp[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputExp[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/inputModulus" type="array">
+      <obj_property name="ElementShortName">inputModulus[255:0]</obj_property>
+      <obj_property name="ObjectShortName">inputModulus[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/BaseReg" type="array">
+      <obj_property name="ElementShortName">BaseReg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">BaseReg[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/Modulus" type="array">
+      <obj_property name="ElementShortName">Modulus[256:0]</obj_property>
+      <obj_property name="ObjectShortName">Modulus[256:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/ExpReg" type="array">
+      <obj_property name="ElementShortName">ExpReg[256:0]</obj_property>
+      <obj_property name="ObjectShortName">ExpReg[256:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/ResultReg" type="array">
+      <obj_property name="ElementShortName">ResultReg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">ResultReg[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/Counter" type="array">
+      <obj_property name="ElementShortName">Counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group188" type="group">
+      <obj_property name="label">MM1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/WORD_WIDTH" type="other">
+         <obj_property name="ElementShortName">WORD_WIDTH</obj_property>
+         <obj_property name="ObjectShortName">WORD_WIDTH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/inputA" type="array">
+         <obj_property name="ElementShortName">inputA[255:0]</obj_property>
+         <obj_property name="ObjectShortName">inputA[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/inputB" type="array">
+         <obj_property name="ElementShortName">inputB[255:0]</obj_property>
+         <obj_property name="ObjectShortName">inputB[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/inputN" type="array">
+         <obj_property name="ElementShortName">inputN[255:0]</obj_property>
+         <obj_property name="ObjectShortName">inputN[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/o_result" type="array">
+         <obj_property name="ElementShortName">o_result[255:0]</obj_property>
+         <obj_property name="ObjectShortName">o_result[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/o_busy" type="logic">
+         <obj_property name="ElementShortName">o_busy</obj_property>
+         <obj_property name="ObjectShortName">o_busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/State" type="other">
+         <obj_property name="ElementShortName">State</obj_property>
+         <obj_property name="ObjectShortName">State</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/Product" type="array">
+         <obj_property name="ElementShortName">Product[256:0]</obj_property>
+         <obj_property name="ObjectShortName">Product[256:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/FactorA" type="array">
+         <obj_property name="ElementShortName">FactorA[255:0]</obj_property>
+         <obj_property name="ObjectShortName">FactorA[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/FactorB" type="array">
+         <obj_property name="ElementShortName">FactorB[256:0]</obj_property>
+         <obj_property name="ObjectShortName">FactorB[256:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/Modulus" type="array">
+         <obj_property name="ElementShortName">Modulus[255:0]</obj_property>
+         <obj_property name="ObjectShortName">Modulus[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/Counter" type="array">
+         <obj_property name="ElementShortName">Counter[8:0]</obj_property>
+         <obj_property name="ObjectShortName">Counter[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm1/WORD_WIDTH" type="other">
+         <obj_property name="ElementShortName">WORD_WIDTH</obj_property>
+         <obj_property name="ObjectShortName">WORD_WIDTH</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group172" type="group">
+      <obj_property name="label">MM2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/inputA" type="array">
+         <obj_property name="ElementShortName">inputA[255:0]</obj_property>
+         <obj_property name="ObjectShortName">inputA[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/inputB" type="array">
+         <obj_property name="ElementShortName">inputB[255:0]</obj_property>
+         <obj_property name="ObjectShortName">inputB[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/inputN" type="array">
+         <obj_property name="ElementShortName">inputN[255:0]</obj_property>
+         <obj_property name="ObjectShortName">inputN[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/o_result" type="array">
+         <obj_property name="ElementShortName">o_result[255:0]</obj_property>
+         <obj_property name="ObjectShortName">o_result[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/o_busy" type="logic">
+         <obj_property name="ElementShortName">o_busy</obj_property>
+         <obj_property name="ObjectShortName">o_busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/State" type="other">
+         <obj_property name="ElementShortName">State</obj_property>
+         <obj_property name="ObjectShortName">State</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/Product" type="array">
+         <obj_property name="ElementShortName">Product[256:0]</obj_property>
+         <obj_property name="ObjectShortName">Product[256:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/FactorA" type="array">
+         <obj_property name="ElementShortName">FactorA[255:0]</obj_property>
+         <obj_property name="ObjectShortName">FactorA[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/FactorB" type="array">
+         <obj_property name="ElementShortName">FactorB[256:0]</obj_property>
+         <obj_property name="ObjectShortName">FactorB[256:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/Modulus" type="array">
+         <obj_property name="ElementShortName">Modulus[255:0]</obj_property>
+         <obj_property name="ObjectShortName">Modulus[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/rsa_core_testbench/u_rsa_core/uut/mm2/Counter" type="array">
+         <obj_property name="ElementShortName">Counter[8:0]</obj_property>
+         <obj_property name="ObjectShortName">Counter[8:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

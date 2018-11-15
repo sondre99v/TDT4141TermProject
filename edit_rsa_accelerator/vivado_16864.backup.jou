@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov 13 18:35:05 2018
+# Process ID: 16864
+# Current directory: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14860 C:\Users\WesleyRyan\Documents\Programming\RSA\TDT4141TermProject\edit_rsa_accelerator\edit_rsa_accelerator.xpr
+# Log file: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/vivado.log
+# Journal file: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top rsa_core_testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+launch_simulation
+source rsa_core_testbench.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+set_property xsim.view C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+synth_design -rtl -name rtl_1
+close_design
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+close_sim

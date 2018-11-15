@@ -33,6 +33,8 @@ set_property ip_repo_paths {
 set_property ip_output_repo c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
+  C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd
+  C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd
   C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd
   C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd
 }

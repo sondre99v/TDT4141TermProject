@@ -1,0 +1,1385 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov 13 18:35:05 2018
+# Process ID: 16864
+# Current directory: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14860 C:\Users\WesleyRyan\Documents\Programming\RSA\TDT4141TermProject\edit_rsa_accelerator\edit_rsa_accelerator.xpr
+# Log file: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/vivado.log
+# Journal file: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator'
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 796.184 ; gain = 108.293
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+update_compile_order -fileset sim_1
+set_property top rsa_core_testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+update_ip_catalog: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 915.078 ; gain = 0.000
+report_ip_status -name ip_status
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mod_exp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mod_mult
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 917.191 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '16' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim/xsim.dir/rsa_core_testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim/xsim.dir/rsa_core_testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Nov 13 20:48:20 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 55.289 ; gain = 0.938
+INFO: [Common 17-206] Exiting Webtalk at Tue Nov 13 20:48:20 2018...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:57 . Memory (MB): peak = 917.191 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '56' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /rsa_core_testbench/tc_inp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+WARNING: Simulation object /rsa_core_testbench/tc_otp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 80 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: COMPARE MSGOUT_DATA[0000] RTL: XXXXXXX0XXXXXXXXXXXXXXXXXXXX0XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   EXPECTED: 85EE722363960779206A2B37CC8B64B5FC12A934473FA0204BBAAF714BC90C01
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Failure: Output message differs from the expected result
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+$finish called at time : 100 ns : File "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" Line 569
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 930.090 ; gain = 12.898
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:01:57 . Memory (MB): peak = 930.090 ; gain = 15.012
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Nov 13 20:58:26 2018] Launched synth_1...
+Run output will be captured here: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 955.238 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 955.238 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /rsa_core_testbench/tc_inp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+WARNING: Simulation object /rsa_core_testbench/tc_otp was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 80 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: COMPARE MSGOUT_DATA[0000] RTL: XXXXXXX0XXXXXXXXXXXXXXXXXXXX0XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   EXPECTED: 85EE722363960779206A2B37CC8B64B5FC12A934473FA0204BBAAF714BC90C01
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Failure: Output message differs from the expected result
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+$finish called at time : 100 ns : File "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" Line 569
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 955.238 ; gain = 0.000
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+set_property xsim.view C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 80 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: COMPARE MSGOUT_DATA[0000] RTL: XXXXXXX0XXXXXXXXXXXXXXXXXXXX0XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   EXPECTED: 85EE722363960779206A2B37CC8B64B5FC12A934473FA0204BBAAF714BC90C01
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Failure: Output message differs from the expected result
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+$finish called at time : 100 ns : File "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" Line 569
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 955.238 ; gain = 0.000
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 956.969 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 80 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 956.969 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20080 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 562 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 742780 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 960.766 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Nov 13 21:25:32 2018] Launched synth_1...
+Run output will be captured here: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mod_exp
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20080 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 562 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 742780 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 977.480 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 26 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 28 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 977.480 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 80 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 100 ns  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 977.480 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Nov 13 21:35:16 2018] Launched synth_1...
+Run output will be captured here: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 977.480 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 977.480 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Nov 13 21:41:49 2018] Launched synth_1...
+Run output will be captured here: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 977.480 ; gain = 0.000
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 980.309 ; gain = 2.828
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mod_exp
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 988.813 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Nov 13 22:03:15 2018] Launched synth_1...
+Run output will be captured here: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.numeric_std
+Compiling architecture rtl of entity xil_defaultlib.mod_mult [mod_mult_default]
+Compiling architecture rtl of entity xil_defaultlib.mod_exp [mod_exp_default]
+Compiling architecture rtl of entity xil_defaultlib.rsa_core [rsa_core_default]
+Compiling architecture struct of entity xil_defaultlib.rsa_core_testbench
+Built simulation snapshot rsa_core_testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 988.813 ; gain = 0.000
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 988.813 ; gain = 0.000
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 988.813 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: rsa_accelerator
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1096.848 ; gain = 108.035
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rsa_accelerator' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'rsa_regio' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:113]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:308]
+INFO: [Synth 8-256] done synthesizing module 'rsa_regio' (1#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgin' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgin.vhd:75]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgin' (2#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgin.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgout' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgout.vhd:68]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgout' (3#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgout.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'rsa_core' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:68]
+	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'mod_exp' declared at 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:24' bound to instance 'uut' of component 'mod_exp' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'mod_exp' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:39]
+	Parameter WORD_WIDTH bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'mod_mult' declared at 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:38' bound to instance 'mm1' of component 'mod_mult' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'mod_mult' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:53]
+	Parameter WORD_WIDTH bound to: 256 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element tempr_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:97]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'mod_mult' (4#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:53]
+INFO: [Synth 8-3491] module 'mod_mult' declared at 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:38' bound to instance 'mm2' of component 'mod_mult' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:200]
+INFO: [Synth 8-256] done synthesizing module 'mod_exp' (5#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:39]
+WARNING: [Synth 8-3848] Net msgout_last in module/entity rsa_core does not have driver. [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'rsa_core' (6#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'rsa_accelerator' (7#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port msgout_last
+WARNING: [Synth 8-3331] design rsa_core has unconnected port msgin_last
+WARNING: [Synth 8-3331] design rsa_core has unconnected port msgout_ready
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1159.355 ; gain = 170.543
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1159.355 ; gain = 170.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1159.355 ; gain = 170.543
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 4 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:36 . Memory (MB): peak = 1568.867 ; gain = 580.055
+22 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:36 . Memory (MB): peak = 1568.867 ; gain = 580.055
+close_design
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rsa_core_testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj rsa_core_testbench_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 91b9267eb12847098834f19c071e9069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot rsa_core_testbench_behav xil_defaultlib.rsa_core_testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rsa_core_testbench_behav -key {Behavioral:sim_1:Functional:rsa_core_testbench} -tclbatch {rsa_core_testbench.tcl} -view {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20040 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20060 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 200700 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 381400 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rsa_core_testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1582.434 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 13 22:26:40 2018...

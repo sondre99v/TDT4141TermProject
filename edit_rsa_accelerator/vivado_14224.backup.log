@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Nov 13 14:28:20 2018
+# Process ID: 14224
+# Current directory: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15364 C:\Users\WesleyRyan\Documents\Programming\RSA\TDT4141TermProject\edit_rsa_accelerator\edit_rsa_accelerator.xpr
+# Log file: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/vivado.log
+# Journal file: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator'
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 786.805 ; gain = 92.000
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd}
+WARNING: [filemgmt 56-12] File 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator'.
+report_ip_status -name ip_status
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 13 18:13:56 2018...

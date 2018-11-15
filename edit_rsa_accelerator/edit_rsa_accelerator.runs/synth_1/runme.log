@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10632 
+INFO: Helper process launched with PID 12376 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 372.113 ; gain = 98.738
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 371.625 ; gain = 98.738
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'rsa_accelerator' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
 	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
@@ -25,142 +25,90 @@ INFO: [Synth 8-638] synthesizing module 'rsa_accelerator' [C:/Users/WesleyRyan/D
 	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'rsa_regio' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'rsa_regio' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:113]
 	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:304]
-INFO: [Synth 8-256] done synthesizing module 'rsa_regio' (1#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:111]
-INFO: [Synth 8-638] synthesizing module 'rsa_msgin' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgin.vhd:69]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:308]
+INFO: [Synth 8-256] done synthesizing module 'rsa_regio' (1#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_regio.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgin' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgin.vhd:75]
 	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
 	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rsa_msgin' (2#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgin.vhd:69]
-INFO: [Synth 8-638] synthesizing module 'rsa_msgout' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgout.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgin' (2#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgin.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'rsa_msgout' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgout.vhd:68]
 	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
 	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_START_COUNT bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rsa_msgout' (3#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgout.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'rsa_msgout' (3#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_msgout.vhd:68]
 INFO: [Synth 8-638] synthesizing module 'rsa_core' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:68]
 	Parameter C_BLOCK_SIZE bound to: 256 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'rsa_core' (4#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'rsa_accelerator' (5#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port clk
-WARNING: [Synth 8-3331] design rsa_core has unconnected port reset_n
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[255]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[254]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[253]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[252]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[251]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[250]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[249]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[248]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[247]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[246]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[245]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[244]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[243]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[242]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[241]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[240]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[239]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[238]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[237]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[236]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[235]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[234]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[233]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[232]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[231]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[230]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[229]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[228]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[227]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[226]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[225]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[224]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[223]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[222]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[221]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[220]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[219]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[218]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[217]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[216]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[215]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[214]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[213]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[212]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[211]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[210]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[209]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[208]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[207]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[206]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[205]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[204]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[203]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[202]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[201]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[200]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[199]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[198]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[197]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[196]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[195]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[194]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[193]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[192]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[191]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[190]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[189]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[188]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[187]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[186]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[185]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[184]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[183]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[182]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[181]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[180]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[179]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[178]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[177]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[176]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[175]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[174]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[173]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[172]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[171]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[170]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[169]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[168]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[167]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[166]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[165]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[164]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[163]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[162]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[161]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[160]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[159]
-WARNING: [Synth 8-3331] design rsa_core has unconnected port key_e_d[158]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3491] module 'mod_exp' declared at 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:24' bound to instance 'uut' of component 'mod_exp' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'mod_exp' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:39]
+	Parameter WORD_WIDTH bound to: 256 - type: integer 
+INFO: [Synth 8-3491] module 'mod_mult' declared at 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:38' bound to instance 'mm1' of component 'mod_mult' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'mod_mult' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:53]
+	Parameter WORD_WIDTH bound to: 256 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element tempr_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:97]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'mod_mult' (4#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:53]
+INFO: [Synth 8-3491] module 'mod_mult' declared at 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd:38' bound to instance 'mm2' of component 'mod_mult' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:196]
+INFO: [Synth 8-256] done synthesizing module 'mod_exp' (5#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:39]
+WARNING: [Synth 8-3848] Net msgout_last in module/entity rsa_core does not have driver. [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'rsa_core' (6#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_core.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'rsa_accelerator' (7#1) [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/rsa_accelerator/hdl/rsa_accelerator.vhd:82]
+WARNING: [Synth 8-3331] design rsa_core has unconnected port msgout_last
+WARNING: [Synth 8-3331] design rsa_core has unconnected port msgin_last
+WARNING: [Synth 8-3331] design rsa_core has unconnected port msgout_ready
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design rsa_msgin has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 433.160 ; gain = 159.785
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 437.488 ; gain = 164.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 433.160 ; gain = 159.785
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 437.488 ; gain = 164.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 437.488 ; gain = 164.602
+---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-802] inferred FSM for state register 'nextState_reg' in module 'mod_mult'
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'inputA_mm2_reg[255:0]' into 'inputA_mm1_reg[255:0]' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:113]
+INFO: [Synth 8-4471] merging register 'inputB_mm2_reg[255:0]' into 'inputA_mm1_reg[255:0]' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:114]
+INFO: [Synth 8-4471] merging register 'inputN_mm2_reg[255:0]' into 'inputN_mm1_reg[255:0]' [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element inputA_mm2_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element inputB_mm2_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:114]
+WARNING: [Synth 8-6014] Unused sequential element inputN_mm2_reg was removed.  [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:115]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd:154]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+           loadregisters |                              001 |                              001
+            shiftproduct |                              010 |                              010
+          firstreduction |                              011 |                              011
+              accumulate |                              100 |                              100
+         secondreduction |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'nextState_reg' using encoding 'sequential' in module 'mod_mult'
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 433.160 ; gain = 159.785
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 436.539 ; gain = 163.164
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 464.406 ; gain = 191.520
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -173,22 +121,41 @@ No constraint files found.
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input    256 Bit         XORs := 1     
++---Adders : 
+	   3 Input    257 Bit       Adders := 1     
+	   3 Input    256 Bit       Adders := 2     
+	   2 Input    256 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	              256 Bit    Registers := 1     
-	               32 Bit    Registers := 42    
-	                8 Bit    Registers := 5     
+	              257 Bit    Registers := 4     
+	              256 Bit    Registers := 15    
+	               32 Bit    Registers := 43    
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 14    
 +---Muxes : 
+	   7 Input    257 Bit        Muxes := 2     
+	   8 Input    257 Bit        Muxes := 2     
 	   4 Input    256 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 33    
-	   2 Input      8 Bit        Muxes := 4     
+	   7 Input    256 Bit        Muxes := 2     
+	   8 Input    256 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 35    
+	   7 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 12    
 	   4 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 37    
+	   6 Input      3 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 5     
-	  35 Input      1 Bit        Muxes := 1     
+	  36 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 12    
+	   8 Input      1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -198,22 +165,24 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module rsa_regio 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 34    
+	               32 Bit    Registers := 35    
 	                8 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 6     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 33    
-	   2 Input      8 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 35    
+	   2 Input      8 Bit        Muxes := 12    
 	   2 Input      1 Bit        Muxes := 5     
-	  35 Input      1 Bit        Muxes := 1     
+	  36 Input      1 Bit        Muxes := 1     
 Module rsa_msgin 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 8     
 	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   4 Input      8 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
@@ -222,14 +191,47 @@ Detailed RTL Component Info :
 +---Registers : 
 	              256 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input    256 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 1     
-Module rsa_core 
+Module mod_mult 
 Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input    256 Bit         XORs := 1     
++---Adders : 
+	   3 Input    256 Bit       Adders := 1     
+	   2 Input    256 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	              257 Bit    Registers := 1     
+	              256 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   7 Input    257 Bit        Muxes := 1     
+	   7 Input    256 Bit        Muxes := 1     
+	   7 Input      9 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 6     
+Module mod_exp 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    257 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              257 Bit    Registers := 2     
+	              256 Bit    Registers := 6     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    257 Bit        Muxes := 2     
+	   8 Input    256 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 25    
+	   8 Input      1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -247,10 +249,24 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3917] design rsa_accelerator has port m00_axis_tstrb[3] driven by constant 1
 WARNING: [Synth 8-3917] design rsa_accelerator has port m00_axis_tstrb[2] driven by constant 1
 WARNING: [Synth 8-3917] design rsa_accelerator has port m00_axis_tstrb[1] driven by constant 1
 WARNING: [Synth 8-3917] design rsa_accelerator has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design rsa_regio has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design rsa_accelerator has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design rsa_accelerator has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design rsa_accelerator has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design rsa_accelerator has unconnected port s00_axis_tstrb[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_rsa_msgout/msgbuf_last_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_rsa_core/uut /\ExpReg_reg[256] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_rsa_regio/aw_en_reg)
 INFO: [Synth 8-3886] merging instance 'u_rsa_regio/axi_rresp_reg[0]' (FDRE) to 'u_rsa_regio/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_rsa_regio/\axi_rresp_reg[1] )
@@ -263,8 +279,17 @@ WARNING: [Synth 8-3332] Sequential element (axi_bresp_reg[1]) is unused and will
 WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[1]) is unused and will be removed from module rsa_regio.
 WARNING: [Synth 8-3332] Sequential element (axi_araddr_reg[0]) is unused and will be removed from module rsa_regio.
 WARNING: [Synth 8-3332] Sequential element (axi_rresp_reg[1]) is unused and will be removed from module rsa_regio.
+WARNING: [Synth 8-3332] Sequential element (ExpReg_reg[256]) is unused and will be removed from module mod_exp.
+WARNING: [Synth 8-3332] Sequential element (u_rsa_msgout/msgbuf_last_r_reg[7]) is unused and will be removed from module rsa_accelerator.
+WARNING: [Synth 8-3332] Sequential element (u_rsa_msgout/msgbuf_last_r_reg[6]) is unused and will be removed from module rsa_accelerator.
+WARNING: [Synth 8-3332] Sequential element (u_rsa_msgout/msgbuf_last_r_reg[5]) is unused and will be removed from module rsa_accelerator.
+WARNING: [Synth 8-3332] Sequential element (u_rsa_msgout/msgbuf_last_r_reg[4]) is unused and will be removed from module rsa_accelerator.
+WARNING: [Synth 8-3332] Sequential element (u_rsa_msgout/msgbuf_last_r_reg[3]) is unused and will be removed from module rsa_accelerator.
+WARNING: [Synth 8-3332] Sequential element (u_rsa_msgout/msgbuf_last_r_reg[2]) is unused and will be removed from module rsa_accelerator.
+WARNING: [Synth 8-3332] Sequential element (u_rsa_msgout/msgbuf_last_r_reg[1]) is unused and will be removed from module rsa_accelerator.
+WARNING: [Synth 8-3332] Sequential element (u_rsa_msgout/msgbuf_last_r_reg[0]) is unused and will be removed from module rsa_accelerator.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -277,7 +302,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -289,7 +314,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -313,7 +338,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -326,7 +351,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:49 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,25 +363,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -369,53 +394,59 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |BUFG  |     1|
-|2     |LUT1  |     1|
-|3     |LUT2  |    56|
-|4     |LUT3  |    37|
-|5     |LUT4  |   228|
-|6     |LUT5  |     1|
-|7     |LUT6  |   463|
-|8     |MUXF7 |   160|
-|9     |FDCE  |   537|
-|10    |FDRE  |  1099|
-|11    |FDSE  |    10|
-|12    |IBUF  |    90|
-|13    |OBUF  |    80|
-+------+------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   353|
+|3     |LUT1   |     6|
+|4     |LUT2   |  1351|
+|5     |LUT3   |  1096|
+|6     |LUT4   |    61|
+|7     |LUT5   |   962|
+|8     |LUT6   |   631|
+|9     |MUXF7  |   130|
+|10    |MUXF8  |    64|
+|11    |FDCE   |   541|
+|12    |FDRE   |  5772|
+|13    |FDSE   |    10|
+|14    |IBUF   |    90|
+|15    |OBUF   |    80|
++------+-------+------+
 
 Report Instance Areas: 
 +------+---------------+-----------+------+
 |      |Instance       |Module     |Cells |
 +------+---------------+-----------+------+
-|1     |top            |           |  2763|
-|2     |  u_rsa_msgin  |rsa_msgin  |   547|
-|3     |  u_rsa_msgout |rsa_msgout |   281|
-|4     |  u_rsa_regio  |rsa_regio  |  1764|
+|1     |top            |           | 11148|
+|2     |  u_rsa_core   |rsa_core   |  8527|
+|3     |    uut        |mod_exp    |  8524|
+|4     |      mm1      |mod_mult   |  2488|
+|5     |      mm2      |mod_mult_0 |  3255|
+|6     |  u_rsa_msgin  |rsa_msgin  |   282|
+|7     |  u_rsa_msgout |rsa_msgout |   266|
+|8     |  u_rsa_regio  |rsa_regio  |  1902|
 +------+---------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 640.086 ; gain = 366.711
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 744.152 ; gain = 471.266
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 548 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 640.086 ; gain = 366.711
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 640.086 ; gain = 366.711
+Synthesis finished with 0 errors, 0 critical warnings and 51 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 744.152 ; gain = 471.266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 744.152 ; gain = 471.266
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 250 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 637 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-25 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+45 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 713.734 ; gain = 452.672
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:07 . Memory (MB): peak = 744.152 ; gain = 483.418
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.runs/synth_1/rsa_accelerator.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file rsa_accelerator_utilization_synth.rpt -pb rsa_accelerator_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.258 . Memory (MB): peak = 713.734 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Nov  5 00:33:27 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.261 . Memory (MB): peak = 744.152 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 15 12:02:30 2018...

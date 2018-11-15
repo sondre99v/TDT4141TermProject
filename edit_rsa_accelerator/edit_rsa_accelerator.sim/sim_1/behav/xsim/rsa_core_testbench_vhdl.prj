@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../edit_rsa_accelerator.srcs/sources_1/new/mod_exp.vhd" \
+"../../../../edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd" \
+"../../../../../rsa_accelerator/hdl/rsa_core.vhd" \
+"../../../../rsa_core_testbench/rsa_core_testbench.vhd" \
+
+# Do not sort compile order
+nosort

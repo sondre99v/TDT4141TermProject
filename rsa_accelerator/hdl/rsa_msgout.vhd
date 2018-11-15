@@ -54,7 +54,14 @@ entity rsa_msgout is
     -- Message that will be sent in to the rsa_msgout module
     msgout_data             :  in std_logic_vector(C_BLOCK_SIZE-1 downto 0);
     -- Indicates boundary of last packet
-    msgout_last             :  in std_logic		
+    msgout_last             :  in std_logic;
+
+   
+   -----------------------------------------------------------------------------
+   -- Misc control signals      
+   -----------------------------------------------------------------------------
+   -- Signal that indicates that the msgout module is active
+   msgout_active           : out std_logic       		
 	);
 end rsa_msgout;
 
@@ -80,7 +87,9 @@ architecture rtl of rsa_msgout is
 	signal m_axis_accept         : std_logic;
 	signal m_axis_tvalid_i       : std_logic;
                                                                  
-	 
+  signal msgout_active_en       : std_logic;
+  signal msgout_active_nxt      : std_logic;  
+  signal msgout_active_r        : std_logic;	 
 begin
   --------------------------------------------------------------------------------	
   -- Store incoming messages. These messages are loaded into a wide 256 bit 
@@ -166,5 +175,24 @@ begin
   m_axis_accept         <= m_axis_tvalid_i and M_AXIS_TREADY;
   -- Send only data bytes
   M_AXIS_TSTRB          <= (others => '1');
+  
+  --------------------------------------------------------------------------------
+  -- Detect activity and set the active flag.
+  --------------------------------------------------------------------------------
+  msgout_active_en  <= msgout_accept or m_axis_accept;
+  msgout_active_nxt <= msgout_valid or (m_axis_tvalid_i and (not msgbuf_last_r(0)));     
+  process(M_AXIS_ARESETN, M_AXIS_ACLK)
+  begin
+    if(M_AXIS_ARESETN='0')then
+      -- Reset the active flag
+      msgout_active_r <= '0';      
+    elsif(M_AXIS_ACLK'event and M_AXIS_ACLK='1') then
+      -- Update the active flag
+      if(msgout_active_en = '1') then
+        msgout_active_r <= msgout_active_nxt;  
+      end if;
+    end if;
+  end process;
+  msgout_active <= msgout_active_r;  
   
 end rtl;
