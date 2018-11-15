@@ -61,3 +61,46 @@ save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProje
 save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
 save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
 save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+save_wave_config {C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench_behav.wcfg
+source rsa_core_testbench.tcl

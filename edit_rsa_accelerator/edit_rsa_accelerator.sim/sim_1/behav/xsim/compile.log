@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/edit_rsa_accelerator.srcs/sources_1/new/mod_mult.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity mod_mult
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rsa_core_testbench

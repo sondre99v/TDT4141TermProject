@@ -1,0 +1,28 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 20 ns  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0000] RTL: 0A23232323232323232323232323232323232323232323232323232323232323
+Time: 20020 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0001] RTL: 0A232020207478742E6E695F307470203A2020202020202020202020454D414E
+Time: 20030 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0002] RTL: 0A2320202020202020202020203336203A2020544E554F43204547415353454D
+Time: 151180 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: COMPARE MSGOUT_DATA[0000] RTL: 85EE722363960779206A2B37CC8B64B5FC12A934473FA0204BBAAF714BC90C01   EXPECTED: 85EE722363960779206A2B37CC8B64B5FC12A934473FA0204BBAAF714BC90C01
+Time: 151190 ps  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: COMPARE MSGOUT_DATA[0001] RTL: 08F9BAF32E8505CBC9A28FED4D5791DCE46508C3D1636232BF91F5D0B6632A9F   EXPECTED: 08F9BAF32E8505CBC9A28FED4D5791DCE46508C3D1636232BF91F5D0B6632A9F
+Time: 281060 ps  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: DRIVE NEW MSGIN_DATA[0003] RTL: 0A2320202020202020202041307830203A464C20726F662065646F6320786548
+Time: 281080 ps  Iteration: 1  Process: /rsa_core_testbench/msgin_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: COMPARE MSGOUT_DATA[0002] RTL: 81CA80617856C964E2F92DDE82841CC7CE81210F56BF18A32D2EE2ADA64586D6   EXPECTED: 81CA80617856C964E2F92DDE82841CC7CE81210F56BF18A32D2EE2ADA64586D6
+Time: 410630 ps  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: COMPARE MSGOUT_DATA[0003] RTL: 805974EFD1C6E0D32AD06D3F86168D991B6DE12371BE881E903C562C2EBEDE8E   EXPECTED: 805974EFD1C6E0D32AD06D3F86168D991B6DE12371BE881E903C562C2EBEDE8E
+Time: 540980 ps  Iteration: 1  Process: /rsa_core_testbench/msgout_bfm  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: ********************************************************************************
+Time: 541020 ps  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming/RSA/TDT4141TermProject/edit_rsa_accelerator/rsa_core_testbench/rsa_core_testbench.vhd
+Note: STARTING NEW TESTCASE
+Time: 541020 ps  Iteration: 1  Process: /rsa_core_testbench/testcase_control  File: C:/Users/WesleyRyan/Documents/Programming

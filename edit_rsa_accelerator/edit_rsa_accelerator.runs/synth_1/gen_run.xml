@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1542279662">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1542284733">
   <File Type="PA-TCL" Name="rsa_accelerator.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="rsa_accelerator_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="rsa_accelerator_reports.tcl"/>

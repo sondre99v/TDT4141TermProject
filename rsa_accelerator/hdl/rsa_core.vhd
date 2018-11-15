@@ -92,6 +92,10 @@ component mod_exp
     
     --internals
     signal new_message : std_logic;
+    signal new_result : std_logic;
+    signal prev_busy : std_logic;
+    signal CurrentMsgIsLast : std_logic;
+    signal CurrentOutMsgIsLast : std_logic;
     
 begin
     uut: mod_exp port map (
@@ -113,8 +117,38 @@ begin
     start <= new_message;   
     BaseReg <= msgin_data;
      --MsgOut interface
-     
-    --msgout_valid <= new_message and (result(0) or result(34));
+    msgout_valid <= new_result;
+    
+    process(busy) begin
+        if (busy = '0') then    
+            CurrentOutMsgIsLast <= CurrentMsgIsLast;
+        end if;
+    end process;
+    
+    process(clk, reset_n) begin
+        if(reset_n = '0') then
+            new_result <= '0';
+            prev_busy <= '0';
+        elsif(clk'event and clk='1') then
+            if(prev_busy = '1' and busy = '0') then
+                new_result <= '1';
+            end if;
+            if(new_result = '1' and msgout_ready = '1') then
+                new_result <= '0';
+            end if;
+            prev_busy <= busy;
+            
+            if (new_message = '1') then
+                CurrentMsgIsLast <= msgin_last;
+            end if;
+            
+            if (busy = '0') then
+            end if;
+        end if;
+        
+    end process;
+            
+    msgout_last <= CurrentOutMsgIsLast;        
     msgout_data <= result;
     
     
