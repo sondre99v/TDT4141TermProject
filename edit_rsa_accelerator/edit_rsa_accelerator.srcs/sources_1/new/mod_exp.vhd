@@ -30,8 +30,10 @@ entity mod_exp is
     inputBase    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
     inputExp     : in  std_logic_vector(WORD_WIDTH-1 downto 0);
     inputModulus : in  std_logic_vector(WORD_WIDTH-1 downto 0);
+    inputTag     : in  std_logic_vector(31 downto 0);
 
     result       : out std_logic_vector(WORD_WIDTH-1 downto 0);
+    outputTag    : out std_logic_vector(31 downto 0);
     busy         : out std_logic
     );
 end mod_exp;
@@ -67,6 +69,8 @@ architecture rtl of mod_exp is
 	signal ExpReg : unsigned(WORD_WIDTH downto 0);
 	signal Modulus : unsigned(WORD_WIDTH downto 0); --remove /add -1
 	signal Counter : unsigned(integer(ceil(log2(real(WORD_WIDTH))))-1 downto 0);
+	
+	signal Tag : std_logic_vector(31 downto 0);
 	
 	--mm1 signals
 	--inputs
@@ -178,6 +182,7 @@ begin
 			case nextState is
 				when Idle =>
 					result <= o_result_mm1;
+					outputTag <= Tag;
 					busy <= '0';
 					
 				when LoadRegisters =>
@@ -186,7 +191,9 @@ begin
 					Modulus <= unsigned('0' & inputModulus); -- remove '0'
 					ResultReg <= to_unsigned(1,ResultReg'length);
 					Counter <= to_unsigned(1,Counter'length);
+					Tag <= inputTag;
 					busy <= '1';
+					
 					
 				when UpShiftModulus =>
 					Modulus <= shift_left(Modulus,1);

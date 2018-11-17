@@ -68,14 +68,16 @@ end rsa_core;
 architecture rtl of rsa_core is
 component mod_exp 
     Port ( 
-        clk             : in  std_logic;
+        clk          : in  std_logic;
         rst          : in  std_logic;
         start        : in  std_logic;
         inputBase    : in  std_logic_vector(C_BLOCK_SIZE-1 downto 0);
         inputExp     : in  std_logic_vector(C_BLOCK_SIZE-1 downto 0);
         inputModulus : in  std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+        inputTag     : in  std_logic_vector(31 downto 0);
     
         result       : out std_logic_vector(C_BLOCK_SIZE-1 downto 0);
+        outputTag    : out std_logic_vector(31 downto 0);
         busy         : out std_logic
         );
         end component;
@@ -94,18 +96,22 @@ component mod_exp
     signal new_message : std_logic;
     signal new_result : std_logic;
     signal prev_busy : std_logic;
-    signal CurrentMsgIsLast : std_logic;
-    signal CurrentOutMsgIsLast : std_logic;
+    
+    --tag
+    signal tag_in : std_logic_vector(31 downto 0);
+    signal tag_out : std_logic_vector(31 downto 0);
     
 begin
     uut: mod_exp port map (
     clk=>clk,
     rst=>reset_n,
     start=>start,
+    inputTag => tag_in,
     inputBase=>BaseReg,
     inputExp=>ExpReg,
     inputModulus=>ModReg,
     result=>result,
+    outputTag => tag_out,
     busy=>busy
     );
     
@@ -116,14 +122,9 @@ begin
     ModReg <= key_n;
     start <= new_message;   
     BaseReg <= msgin_data;
+    tag_in(0) <= msgin_last; 
      --MsgOut interface
     msgout_valid <= new_result;
-    
-    process(busy) begin
-        if (busy = '0') then    
-            CurrentOutMsgIsLast <= CurrentMsgIsLast;
-        end if;
-    end process;
     
     process(clk, reset_n) begin
         if(reset_n = '0') then
@@ -133,14 +134,12 @@ begin
             if(prev_busy = '1' and busy = '0') then
                 new_result <= '1';
             end if;
+            
             if(new_result = '1' and msgout_ready = '1') then
                 new_result <= '0';
             end if;
-            prev_busy <= busy;
             
-            if (new_message = '1') then
-                CurrentMsgIsLast <= msgin_last;
-            end if;
+            prev_busy <= busy;
             
             if (busy = '0') then
             end if;
@@ -148,17 +147,8 @@ begin
         
     end process;
             
-    msgout_last <= CurrentOutMsgIsLast;        
+    msgout_last <= tag_out(0);        
     msgout_data <= result;
     
-    
-    
-
-
-
-  --msgout_valid <= msgin_valid;   
-  --msgin_ready  <= msgout_ready;
-  --msgout_data  <= msgin_data xor key_n; --result
-  --msgout_last  <= msgin_last;
-  rsa_status   <= (others => '0');
+    rsa_status   <= (others => '0');
 end rtl;
