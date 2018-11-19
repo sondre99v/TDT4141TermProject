@@ -22,46 +22,37 @@ use IEEE.math_real."log2";
 --use UNISIM.VComponents.all;
 
 entity mod_exp is
-    generic(WORD_WIDTH : integer :=256);
+    generic(
+        WORD_WIDTH   : integer := 256
+    );
     Port ( 
-    clk		     : in  std_logic;
-    rst          : in  std_logic;
-    start        : in  std_logic;
-    inputBase    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-    inputExp     : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-    inputModulus : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-    inputTag     : in  std_logic_vector(31 downto 0);
-
-    result       : out std_logic_vector(WORD_WIDTH-1 downto 0);
-    outputTag    : out std_logic_vector(31 downto 0);
-    busy         : out std_logic
+        clk		     : in std_logic;
+        rst          : in std_logic;
+        start        : in std_logic;
+        retreive     : in std_logic;
+        inputBase    : in std_logic_vector(WORD_WIDTH-1 downto 0);
+        inputExp     : in std_logic_vector(WORD_WIDTH-1 downto 0);
+        inputModulus : in std_logic_vector(WORD_WIDTH-1 downto 0);
+        inputTag     : in std_logic_vector(31 downto 0);
+        
+        result       : out std_logic_vector(WORD_WIDTH-1 downto 0);
+        outputTag    : out std_logic_vector(31 downto 0);
+        busy         : out std_logic;
+        ready        : out std_logic
     );
 end mod_exp;
 
 architecture rtl of mod_exp is
 	type State_Type is (
-		Idle, 
+		Idle,
 		LoadRegisters,
 		UpShiftModulus, 
 		ReduceBase,
 		InitiateMultiplications, 
 		AwaitProducts,
-		ExtractProducts
+		ExtractProducts,
+		ResultReady
 	);
-	
-	 component mod_mult 
-       port (
-       clk          : in  std_logic;
-       rst_n       : in  std_logic;
-       start     : in  std_logic;
-       inputA    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-       inputB    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-       inputN    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
-   
-       o_result    : out std_logic_vector(WORD_WIDTH-1 downto 0);
-       o_busy   : out std_logic
-       );
-       end component;
 	
 	signal State : State_Type;
 	signal ResultReg : unsigned(WORD_WIDTH-1 downto 0);
@@ -74,10 +65,10 @@ architecture rtl of mod_exp is
 	
 	--mm1 signals
 	--inputs
-    signal i_start_mm1     :   std_logic:='0';
-    signal inputA_mm1    :   std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
-    signal inputB_mm1    :   std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
-    signal inputN_mm1    :   std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
+    signal i_start_mm1 : std_logic:='0';
+    signal inputA_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
+    signal inputB_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
+    signal inputN_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
      
     --outputs
     signal o_result_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0);
@@ -85,41 +76,41 @@ architecture rtl of mod_exp is
     
     --mm1 signals
     --inputs
-    signal i_start_mm2     :   std_logic:='0';
-    signal inputA_mm2    :   std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
-    signal inputB_mm2    :   std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
-    signal inputN_mm2    :   std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
+    signal i_start_mm2 : std_logic:='0';
+    signal inputA_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
+    signal inputB_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
+    signal inputN_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
      
     --outputs
     signal o_result_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0);
     signal o_busy_mm2 : std_logic;
-       
-       
-	
-	
-
+    
 begin
-    --connections
-    mm1: mod_mult port map (
-        clk=>clk,
-        rst_n=>rst,
-        start=>i_start_mm1,
-        inputA=>inputA_mm1,
-        inputB=>inputB_mm1,
-        inputN=>inputN_mm1,
-        o_result=>o_result_mm1,
-        o_busy=>o_busy_mm1
-        );
-    mm2: mod_mult port map (
-            clk=>clk,
-            rst_n=>rst,
-            start=>i_start_mm2,
-            inputA=>inputA_mm2,
-            inputB=>inputB_mm2,
-            inputN=>inputN_mm2,
-            o_result=>o_result_mm2,
-            o_busy=>o_busy_mm2
-            );
+    mm1: entity work.mod_mult port map (
+        clk => clk,
+        rst_n => rst,
+        start => i_start_mm1,
+        inputA => inputA_mm1,
+        inputB => inputB_mm1,
+        inputN => inputN_mm1,
+        o_result => o_result_mm1,
+        o_busy => o_busy_mm1
+    );
+    
+    mm2: entity work.mod_mult port map (
+        clk => clk,
+        rst_n => rst,
+        start => i_start_mm2,
+        inputA => inputA_mm2,
+        inputB => inputB_mm2,
+        inputN => inputN_mm2,
+        o_result => o_result_mm2,
+        o_busy => o_busy_mm2
+    );
+    
+    ready <= '1' when (State = Idle) else '0';
+    busy <= '0' when (State = Idle or State = ResultReady) else '1';
+    
 	process(clk, rst, State) 
 		--Variables inside processes
 		variable nextState : State_Type;
@@ -130,7 +121,7 @@ begin
 		if(rst = '0') then
 			nextState := Idle;
 			--result    <=(others => '0');
-            busy   <='0';
+            --busy <= '0';
 		elsif rising_edge(clk) then
 		
 			-- Handle state transitions
@@ -169,11 +160,16 @@ begin
 					
 				when ExtractProducts =>
 					if ExpReg = 0 then
-						nextState := Idle;
+						nextState := ResultReady;
 					else
 						nextState := InitiateMultiplications;
 					end if;
 					
+				when ResultReady =>
+				    if retreive = '1' then
+				        nextState := Idle;
+				    end if;
+				    
 				when others =>
 					nextState := Idle;
 			end case;
@@ -181,9 +177,7 @@ begin
 			-- Handle entry actions for the new state
 			case nextState is
 				when Idle =>
-					result <= o_result_mm1;
-					outputTag <= Tag;
-					busy <= '0';
+					--busy <= '0';
 					
 				when LoadRegisters =>
 					BaseReg <= unsigned(inputBase);
@@ -192,7 +186,7 @@ begin
 					ResultReg <= to_unsigned(1,ResultReg'length);
 					Counter <= to_unsigned(1,Counter'length);
 					Tag <= inputTag;
-					busy <= '1';
+					--busy <= '1';
 					
 					
 				when UpShiftModulus =>
@@ -238,12 +232,15 @@ begin
 					end if;
 					BaseReg <= unsigned(o_result_mm2);
 					ExpReg <= shift_right(ExpReg,1);
+                                        
+                when ResultReady =>
+                    result <= o_result_mm1;
+                    outputTag <= Tag;
 					
 				when others =>
 					nextState := Idle;
 				
 			end case;
-			
 		end if;
 		
 		State <= nextState;
