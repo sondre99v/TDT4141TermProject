@@ -17,6 +17,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_misc.all;
 
 
 entity rsa_core is
@@ -65,7 +66,7 @@ entity rsa_core is
 end rsa_core;
 
 architecture rtl of rsa_core is
-    constant C_NUM_CORES : integer := 2;
+    constant C_NUM_CORES : natural := 8;
     
     -- Core Interface Signals
     type dataWordArray  is array (C_NUM_CORES-1 downto 0) of std_logic_vector(C_BLOCK_SIZE-1 downto 0);
@@ -89,67 +90,32 @@ architecture rtl of rsa_core is
     
 begin
     -- Instansiate Cores
---    g_GEN_CORES: for i in (0 to C_NUM_CORES-1) generate
---        me0: entity work.mod_exp port map (
---            clk => clk,
---            reset_n => reset_n,
---            start => core_start(i),
---            retreive => core_retreive(i),
---            inputTag => core_tag_in(i),
---            inputBase => msgin_data,
---            inputExp => key_e_d,
---            inputModulus => key_n,
---            result => core_result(i),
---            outputTag => core_tag_out(i),
---            busy => core_busy(i),
---            ready => core_ready(i)
---        );
-        
---        core_tag_in(i)(31) <= msgin_last;
---        core_tag_in(i)(30 downto 0) <= next_id_in;
---    end generate g_GEN_CORES;
+    g_GEN_CORES: for i in 0 to C_NUM_CORES-1 generate
+    begin
+        me: entity work.mod_exp port map (
+            clk => clk,
+            reset_n => reset_n,
+            start => core_start(i),
+            retreive => core_retreive(i),
+            inputTag => core_tag_in(i),
+            inputBase => msgin_data,
+            inputExp => key_e_d,
+            inputModulus => key_n,
+            result => core_result(i),
+            outputTag => core_tag_out(i),
+            busy => core_busy(i),
+            ready => core_ready(i)
+        );
     
-    me0: entity work.mod_exp port map (
-        clk => clk,
-        reset_n => reset_n,
-        start => core_start(0),
-        retreive => core_retreive(0),
-        inputTag => core_tag_in(0),
-        inputBase => msgin_data,
-        inputExp => key_e_d,
-        inputModulus => key_n,
-        result => core_result(0),
-        outputTag => core_tag_out(0),
-        busy => core_busy(0),
-        ready => core_ready(0)
-    );
-    
-    core_tag_in(0)(31) <= msgin_last;
-    core_tag_in(0)(30 downto 0) <= next_id_in;
-        
-    me1: entity work.mod_exp port map (
-       clk => clk,
-       reset_n => reset_n,
-       start => core_start(1),
-       retreive => core_retreive(1),
-       inputTag => core_tag_in(1),
-       inputBase => msgin_data,
-       inputExp => key_e_d,
-       inputModulus => key_n,
-       result => core_result(1),
-       outputTag => core_tag_out(1),
-       busy => core_busy(1),
-       ready => core_ready(1)
-    );
-    
-    core_tag_in(1)(31) <= msgin_last;
-    core_tag_in(1)(30 downto 0) <= next_id_in;
+        core_tag_in(i)(31) <= msgin_last;
+        core_tag_in(i)(30 downto 0) <= next_id_in;
+    end generate g_GEN_CORES;
 
     --MsgIn interface
     msgin_ready <= free_core; 
     
     -- Dispatcher
-    free_core <= core_ready(0) or core_ready(1);
+    free_core <= or_reduce(std_logic_vector(core_ready));
     start_new_job <= free_core and msgin_valid;
     
     -- Start the first free core
@@ -158,11 +124,20 @@ begin
         
         if(start_new_job = '1') then
             -- Choose core to dispatch job to
-            if (core_ready(0) = '1') then
-                core_start(0) <= '1';
-            elsif (core_ready(1) = '1') then
-                core_start(1) <= '1';
-            end if;
+            for i in 0 to C_NUM_CORES-1 loop
+                if (core_ready(i) = '1') then
+                    core_start(i) <= '1';
+                    exit;
+                end if;
+            end loop;
+            
+            
+--            if (core_ready(0) = '1') then
+--                core_start(0) <= '1';
+--            elsif (core_ready(1) = '1') then
+--                core_start(1) <= '1';
+--            end if;
+            
        end if;
     end process;
    
@@ -175,21 +150,16 @@ begin
         core_retreive <= (others=>'0');
         
         if (msgout_ready = '1') then
-            if (core_busy(0) = '0' and core_ready(0) = '0' and core_tag_out(0)(30 downto 0) = next_id_out) then
-                msgout_data <= core_result(0);
-                msgout_last <= core_tag_out(0)(31);
-                msgout_valid <= '1';
-                core_retreive(0) <= '1';
-                new_job_done <= '1';
-            end if;
-                            
-            if (core_busy(1) = '0' and core_ready(1) = '0' and core_tag_out(1)(30 downto 0) = next_id_out) then
-                msgout_data <= core_result(1);
-                msgout_last <= core_tag_out(1)(31);
-                msgout_valid <= '1';
-                core_retreive(1) <= '1';
-                new_job_done <= '1';
-            end if;
+            -- Loop through all cores to find if one of them has the next job finished
+            for i in 0 to C_NUM_CORES-1 loop
+                if (core_busy(i) = '0' and core_ready(i) = '0' and core_tag_out(i)(30 downto 0) = next_id_out) then
+                    msgout_data <= core_result(i);
+                    msgout_last <= core_tag_out(i)(31);
+                    msgout_valid <= '1';
+                    core_retreive(i) <= '1';
+                    new_job_done <= '1';
+                end if;
+            end loop;
         end if;
     end process;
    
