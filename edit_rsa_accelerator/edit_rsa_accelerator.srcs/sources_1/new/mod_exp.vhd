@@ -2,7 +2,7 @@
 -- Name:     mod_exp.vhd   
 -- Created:  12.11.18 @ NTNU   
 -- Author:   Sondre Ninive Andersen
--- Purpose:  A modular exponentiator.
+-- Purpose:  Modular exponentiation
 -- *****************************************************************************
 
 library IEEE;
@@ -10,16 +10,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 use IEEE.math_real."ceil";
 use IEEE.math_real."log2";
---use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity mod_exp is
     generic(
@@ -27,7 +18,7 @@ entity mod_exp is
     );
     Port ( 
         clk		     : in std_logic;
-        rst          : in std_logic;
+        reset_n      : in std_logic;
         start        : in std_logic;
         retreive     : in std_logic;
         inputBase    : in std_logic_vector(WORD_WIDTH-1 downto 0);
@@ -58,7 +49,7 @@ architecture rtl of mod_exp is
 	signal ResultReg : unsigned(WORD_WIDTH-1 downto 0);
 	signal BaseReg : unsigned(WORD_WIDTH-1 downto 0);
 	signal ExpReg : unsigned(WORD_WIDTH downto 0);
-	signal Modulus : unsigned(WORD_WIDTH downto 0); --remove /add -1
+	signal Modulus : unsigned(WORD_WIDTH downto 0);
 	signal Counter : unsigned(integer(ceil(log2(real(WORD_WIDTH))))-1 downto 0);
 	
 	signal Tag : std_logic_vector(31 downto 0);
@@ -66,9 +57,6 @@ architecture rtl of mod_exp is
 	--mm1 signals
 	--inputs
     signal i_start_mm1 : std_logic:='0';
-    signal inputA_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
-    signal inputB_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
-    signal inputN_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
      
     --outputs
     signal o_result_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0);
@@ -77,9 +65,6 @@ architecture rtl of mod_exp is
     --mm1 signals
     --inputs
     signal i_start_mm2 : std_logic:='0';
-    signal inputA_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
-    signal inputB_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
-    signal inputN_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0):=(others =>'0');
      
     --outputs
     signal o_result_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0);
@@ -88,40 +73,41 @@ architecture rtl of mod_exp is
 begin
     mm1: entity work.mod_mult port map (
         clk => clk,
-        rst_n => rst,
+        reset_n => reset_n,
         start => i_start_mm1,
-        inputA => inputA_mm1,
-        inputB => inputB_mm1,
-        inputN => inputN_mm1,
-        o_result => o_result_mm1,
-        o_busy => o_busy_mm1
+        inputA => std_logic_vector(BaseReg),
+        inputB => std_logic_vector(ResultReg),
+        inputN => std_logic_vector(Modulus(WORD_WIDTH-1 downto 0)),
+        result => o_result_mm1,
+        busy => o_busy_mm1
     );
     
     mm2: entity work.mod_mult port map (
         clk => clk,
-        rst_n => rst,
+        reset_n => reset_n,
         start => i_start_mm2,
-        inputA => inputA_mm2,
-        inputB => inputB_mm2,
-        inputN => inputN_mm2,
-        o_result => o_result_mm2,
-        o_busy => o_busy_mm2
+        inputA => std_logic_vector(BaseReg),
+        inputB => std_logic_vector(BaseReg),
+        inputN => std_logic_vector(Modulus(WORD_WIDTH-1 downto 0)),
+        result => o_result_mm2,
+        busy => o_busy_mm2
     );
     
+    --Combinational computation of control signals
     ready <= '1' when (State = Idle) else '0';
     busy <= '0' when (State = Idle or State = ResultReady) else '1';
+    i_start_mm1 <= '1' when (State = InitiateMultiplications and ExpReg(0) = '1') else '0';
+    i_start_mm2 <= '1' when (State = InitiateMultiplications) else '0';
     
-	process(clk, rst, State) 
-		--Variables inside processes
+    --Process to handle FSM
+	process(clk, reset_n)
 		variable nextState : State_Type;
-		variable temp : unsigned(WORD_WIDTH downto 0):=(others => '0'); --make wordwidt-1
+		variable temp : unsigned(WORD_WIDTH downto 0);
 	begin
 		nextState := State;
 		
-		if(rst = '0') then
+		if(reset_n = '0') then
 			nextState := Idle;
-			--result    <=(others => '0');
-            --busy <= '0';
 		elsif rising_edge(clk) then
 		
 			-- Handle state transitions
@@ -177,20 +163,18 @@ begin
 			-- Handle entry actions for the new state
 			case nextState is
 				when Idle =>
-					--busy <= '0';
+					--No action
 					
 				when LoadRegisters =>
 					BaseReg <= unsigned(inputBase);
 					ExpReg <= unsigned('0' & inputExp);
-					Modulus <= unsigned('0' & inputModulus); -- remove '0'
+					Modulus <= unsigned('0' & inputModulus);
 					ResultReg <= to_unsigned(1,ResultReg'length);
 					Counter <= to_unsigned(1,Counter'length);
 					Tag <= inputTag;
-					--busy <= '1';
-					
 					
 				when UpShiftModulus =>
-					Modulus <= shift_left(Modulus,1);
+					Modulus <= shift_left(Modulus, 1);
 					Counter <= (Counter + 1);
 					
 				when ReduceBase =>
@@ -204,27 +188,11 @@ begin
 					end if;
 					Counter <= (Counter - 1);
 					
-					
 				when InitiateMultiplications =>
-					-- These assignments can be removed if
-					-- the mm entities are instansiated with 
-					-- their inputs always connected to the correct signals
-					inputA_mm1 <= std_logic_vector(BaseReg);
-					inputB_mm1 <= std_logic_vector(ResultReg);
-					inputN_mm1 <= std_logic_vector(Modulus(WORD_WIDTH-1 downto 0));
-					inputA_mm2 <= std_logic_vector(BaseReg);
-					inputB_mm2 <= std_logic_vector(BaseReg);
-					inputN_mm2 <= std_logic_vector(Modulus(WORD_WIDTH-1 downto 0));
-					inputN_mm2 <= std_logic_vector(Modulus(WORD_WIDTH-1 downto 0));
-					
-					if ExpReg(0) = '1' then
-						i_start_mm1 <= '1';
-					end if;
-					i_start_mm2 <= '1';
+					-- No action
 					
 				when AwaitProducts =>
-					i_start_mm1 <= '0';
-					i_start_mm2 <= '0';
+					-- No action
 					
 				when ExtractProducts =>
 					if ExpReg(0) = '1' then
