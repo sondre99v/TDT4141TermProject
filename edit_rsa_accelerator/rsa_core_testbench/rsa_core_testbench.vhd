@@ -27,7 +27,7 @@ architecture struct of rsa_core_testbench is
   -- THIS CONSTANT MUST POINT TO THE LOCATION OF THE TESTS!
   -- The tests in the short_tests folder contains 4 messages from each of the 
   -- testcases in the long_tests folder. 
-  constant C_TESTCASE_FOLDER: string := "C:\Users\WesleyRyan\Documents\Programming\RSA\TDT4141TermProject\edit_rsa_accelerator\rsa_core_testbench\rsa_tests\short_tests\";
+  constant C_TESTCASE_FOLDER: string := "C:\Users\Sondre\Documents\TDT4141TermProject\edit_rsa_accelerator\rsa_core_testbench\rsa_tests\short_tests\";
     
   -----------------------------------------------------------------------------
   -- Clocks and reset
