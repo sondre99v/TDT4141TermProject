@@ -1,7 +1,7 @@
 -- *****************************************************************************
 -- Name:     mod_exp.vhd   
 -- Created:  12.11.18 @ NTNU   
--- Author:   Sondre Ninive Andersen
+-- Author:   Sondre Ninive Andersen, Wesley Ryan Paintsil
 -- Purpose:  Modular exponentiation
 -- *****************************************************************************
 
@@ -17,21 +17,30 @@ entity mod_exp is
         WORD_WIDTH   : integer := 256
     );
     Port ( 
+        -- Clock and reset inputs
         clk		     : in std_logic;
         reset_n      : in std_logic;
-        start        : in std_logic;
-        retreive     : in std_logic;
+        
+        -- Argument inputs
         inputBase    : in std_logic_vector(WORD_WIDTH-1 downto 0);
         inputExp     : in std_logic_vector(WORD_WIDTH-1 downto 0);
         inputModulus : in std_logic_vector(WORD_WIDTH-1 downto 0);
-        inputTag     : in std_logic_vector(31 downto 0);
         
+        -- Result output
         result       : out std_logic_vector(WORD_WIDTH-1 downto 0);
+        
+        -- Tag, used to keep track of metadata about the job
+        inputTag     : in std_logic_vector(31 downto 0);
         outputTag    : out std_logic_vector(31 downto 0);
-        busy         : out std_logic;
-        ready        : out std_logic
+        
+        -- Control signals
+        start        : in std_logic;    -- When high, inputs will be latched, and a new job will be started
+        busy         : out std_logic;   -- When high, the component is working on a job
+        ready        : out std_logic;   -- When high, the component is ready to start a new job
+        retreive     : in std_logic     -- When high, the component will consider the result as read, and will allow a new job to start
     );
 end mod_exp;
+
 
 architecture rtl of mod_exp is
 	type State_Type is (
@@ -45,33 +54,32 @@ architecture rtl of mod_exp is
 		ResultReady
 	);
 	
+	-- Registers used during the computation
 	signal State : State_Type;
 	signal ResultReg : unsigned(WORD_WIDTH-1 downto 0);
 	signal BaseReg : unsigned(WORD_WIDTH-1 downto 0);
 	signal ExpReg : unsigned(WORD_WIDTH downto 0);
 	signal Modulus : unsigned(WORD_WIDTH downto 0);
 	signal Counter : unsigned(integer(ceil(log2(real(WORD_WIDTH))))-1 downto 0);
-	
 	signal Tag : std_logic_vector(31 downto 0);
 	
-	--mm1 signals
-	--inputs
+	-- mm1 signals
     signal i_start_mm1 : std_logic:='0';
-     
-    --outputs
     signal o_result_mm1 : std_logic_vector(WORD_WIDTH-1 downto 0);
     signal o_busy_mm1 : std_logic;
     
-    --mm1 signals
-    --inputs
+    -- mm2 signals
     signal i_start_mm2 : std_logic:='0';
-     
-    --outputs
     signal o_result_mm2 : std_logic_vector(WORD_WIDTH-1 downto 0);
     signal o_busy_mm2 : std_logic;
     
 begin
-    mm1: entity work.mod_mult port map (
+    -- Instansiate modular multiplier to multiply in factors to the accumulator
+    mm1: entity work.mod_mult
+    generic map (
+        WORD_WIDTH => WORD_WIDTH
+    )
+    port map (
         clk => clk,
         reset_n => reset_n,
         start => i_start_mm1,
@@ -82,7 +90,12 @@ begin
         busy => o_busy_mm1
     );
     
-    mm2: entity work.mod_mult port map (
+    -- Instansiate modular multiplier to square the base register
+    mm2: entity work.mod_mult
+    generic map (
+        WORD_WIDTH => WORD_WIDTH
+    )
+    port map (
         clk => clk,
         reset_n => reset_n,
         start => i_start_mm2,
@@ -93,13 +106,13 @@ begin
         busy => o_busy_mm2
     );
     
-    --Combinational computation of control signals
+    -- Combinational computation of control signals
     ready <= '1' when (State = Idle) else '0';
     busy <= '0' when (State = Idle or State = ResultReady) else '1';
     i_start_mm1 <= '1' when (State = InitiateMultiplications and ExpReg(0) = '1') else '0';
     i_start_mm2 <= '1' when (State = InitiateMultiplications) else '0';
     
-    --Process to handle FSM
+    -- Process to handle FSM
 	process(clk, reset_n)
 		variable nextState : State_Type;
 		variable temp : unsigned(WORD_WIDTH downto 0);
@@ -132,7 +145,7 @@ begin
 					end if;
 					
 				when ReduceBase =>
-					if (Counter = 0) then -- counter 1 
+					if (Counter = 0) then
 						nextState := InitiateMultiplications;
 					end if;
 					
@@ -178,13 +191,14 @@ begin
 					Counter <= (Counter + 1);
 					
 				when ReduceBase =>
+				    -- Subtract modulus from base if base > modulus
 					temp := unsigned('0' & BaseReg) - Modulus;
-					if (temp(WORD_WIDTH)='0') then --add -1
-						BaseReg <= temp(WORD_WIDTH-1 downto 0); --remove downto
+					if (temp(WORD_WIDTH) = '0') then
+						BaseReg <= temp(WORD_WIDTH-1 downto 0);
 					end if;
 					
-					if ((Counter /= 1)) then --/=0
-						Modulus <= shift_right(Modulus,1);
+					if (Counter /= 1) then
+						Modulus <= shift_right(Modulus, 1);
 					end if;
 					Counter <= (Counter - 1);
 					

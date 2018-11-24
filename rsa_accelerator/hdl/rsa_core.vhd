@@ -22,7 +22,7 @@ use ieee.std_logic_misc.all;
 
 entity rsa_core is
     generic (
-        C_BLOCK_SIZE          : integer := 256
+        C_BLOCK_SIZE           : integer := 256
 	);
     port (
         -----------------------------------------------------------------------------
@@ -81,7 +81,7 @@ architecture rtl of rsa_core is
     signal core_ready    : signalArray;
     signal core_retreive : signalArray;
     
-    -- Dispatcher
+    -- Dispatcher signals
     signal free_core    : std_logic;
     signal start_new_job: std_logic;
     signal new_job_done : std_logic;
@@ -92,7 +92,11 @@ begin
     -- Instansiate Cores
     g_GEN_CORES: for i in 0 to C_NUM_CORES-1 generate
     begin
-        me: entity work.mod_exp port map (
+        me: entity work.mod_exp 
+        generic map (
+            WORD_WIDTH => C_BLOCK_SIZE
+        )
+        port map (
             clk => clk,
             reset_n => reset_n,
             start => core_start(i),
@@ -127,17 +131,9 @@ begin
             for i in 0 to C_NUM_CORES-1 loop
                 if (core_ready(i) = '1') then
                     core_start(i) <= '1';
-                    exit;
+                    exit; -- Exit once a core has been found and started
                 end if;
             end loop;
-            
-            
---            if (core_ready(0) = '1') then
---                core_start(0) <= '1';
---            elsif (core_ready(1) = '1') then
---                core_start(1) <= '1';
---            end if;
-            
        end if;
     end process;
    
@@ -153,6 +149,7 @@ begin
             -- Loop through all cores to find if one of them has the next job finished
             for i in 0 to C_NUM_CORES-1 loop
                 if (core_busy(i) = '0' and core_ready(i) = '0' and core_tag_out(i)(30 downto 0) = next_id_out) then
+                    -- Output the found cores result, and signal to the core that it can reset 
                     msgout_data <= core_result(i);
                     msgout_last <= core_tag_out(i)(31);
                     msgout_valid <= '1';
@@ -181,6 +178,6 @@ begin
         end if;
     end process;
     
-    --rsa_status(0) <= core_busy(0);
-    --rsa_status(1) <= core_busy(1);
+    -- Show the busy signal for each core in the status register  
+    rsa_status(C_NUM_CORES-1 downto 0) <= std_logic_vector(core_busy);
 end rtl;

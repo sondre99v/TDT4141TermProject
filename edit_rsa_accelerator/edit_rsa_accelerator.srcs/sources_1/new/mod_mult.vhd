@@ -1,7 +1,7 @@
 -- *****************************************************************************
 -- Name:     mod_mult.vhd   
 -- Created:  05.11.18 @ NTNU   
--- Author:   Sondre Ninive Andersen
+-- Author:   Sondre Ninive Andersen, Wesley Ryan Paintsil
 -- Purpose:  Modular multiplication
 -- *****************************************************************************
 
@@ -16,18 +16,25 @@ entity mod_mult is
     generic(
         WORD_WIDTH : integer := 256
     );
-    Port ( 
+    Port (
+        -- Clock and reset inputs
         clk		  : in  std_logic;
         reset_n   : in  std_logic;
-        start     : in  std_logic;
+        
+        -- Argument inputs
         inputA    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
         inputB    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
         inputN    : in  std_logic_vector(WORD_WIDTH-1 downto 0);
     
+        -- Result output
         result    : out std_logic_vector(WORD_WIDTH-1 downto 0);
-        busy      : out std_logic
+        
+        -- Control signals
+        start     : in  std_logic;  -- When high, inputs will be latched, and a new job will be started
+        busy      : out std_logic   -- When high, the component is working on a job
     );
 end mod_mult;
+
 
 architecture rtl of mod_mult is
 	type State_Type is (
@@ -39,6 +46,7 @@ architecture rtl of mod_mult is
 		SecondReduction
 	);
 	
+	-- Registers used during the computation
 	signal State : State_Type;
 	signal Product : unsigned(WORD_WIDTH downto 0):= (others => '0');
 	signal FactorA : unsigned(WORD_WIDTH-1 downto 0);
@@ -46,29 +54,35 @@ architecture rtl of mod_mult is
 	signal Modulus : unsigned(WORD_WIDTH-1 downto 0);
 	signal Counter : unsigned(integer(ceil(log2(real(WORD_WIDTH)))) downto 0);
     
+    -- Signals for the single adder used for the accumulation and reduction steps
     signal AdderResult : unsigned(WORD_WIDTH downto 0);
     signal AdderInputB : unsigned(WORD_WIDTH downto 0);
     signal AdderCarryIn : unsigned(0 downto 0);
 begin
+    -- Instansiate the WORD_WITH-bit adder
     AdderResult <= Product + AdderInputB + AdderCarryIn;
     
+    -- Process to setup the adder depending on the state
     process(State, Modulus, FactorA) begin
-        if (State = ShiftProduct or State = Accumulate) then
+    
+        if (State = ShiftProduct or State = Accumulate) then -- Next state is a reduction state
             -- Setup adder to subtract the modulus
             AdderInputB <= not unsigned('0' & Modulus);
             AdderCarryIn <= to_unsigned(1, 1);
-        elsif (State = FirstReduction) then
+            
+        elsif (State = FirstReduction) then -- Next state is "Accumulate"
             -- Setup adder to add factor A
             AdderInputB <= unsigned('0' & FactorA);
             AdderCarryIn <= to_unsigned(0, 1);
+            
         else
             AdderInputB <= (others => '0');
             AdderCarryIn <= (others => '0');
         end if;
     end process;
     
+    -- Process to handle FSM
 	process(clk, reset_n)
-        --Variables inside processes
         variable nextState : State_Type;
         variable temp : unsigned(WORD_WIDTH downto 0) := (others => '0');
 	begin
@@ -137,24 +151,17 @@ begin
 					
 				when FirstReduction =>
 					FactorB <= shift_left(FactorB, 1);
-					--temp := Product - unsigned('0' & Modulus);
-					--if (temp(WORD_WIDTH) = '0') then
-					--	Product <= temp;
-					--end if;
+					
+					-- Use the reduced result if it is positive
 					if (AdderResult(WORD_WIDTH) = '0') then
 					   Product <= AdderResult;
 					end if;
 				    
 				when Accumulate =>
-					--Product <= Product + unsigned('0' & FactorA);
 				    Product <= AdderResult;
 				    
 				when SecondReduction =>
-					--temp := Product - unsigned('0' & Modulus);
-					--if (temp(WORD_WIDTH) = '0') then
-					--	Product <= temp;
-					--end if;
-				    
+                    -- Use the reduced result if it is positive
                     if (AdderResult(WORD_WIDTH) = '0') then
                        Product <= AdderResult;
                     end if;
